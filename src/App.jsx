@@ -1,7 +1,9 @@
+import HeaderMobile from "./components/HeaderMobile";
 
-
-import default function App() {
-    return(
-        
-    )
+export default function App() {
+  return (
+    <div>
+      <HeaderMobile />
+    </div>
+  );
 }
