@@ -1,15 +1,28 @@
+import { useState } from "react";
 import logoHeader from "../assets/logo-header.svg";
+import MenuNav from "./Nav"
 
 export default function HeaderMobile() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleOpenOrCloseMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+
   return (
      <header className="drop-shadow-md p-6  md:h-[160px]">
   <div className="flex items-center">
     {/* Botão do menu */}
-    <button id="menu-button" className="mr-4 md:hidden cursor-pointer">
-      <span className="block w-6 h-1 bg-black mb-1"></span>
-      <span className="block w-6 h-1 bg-black mb-1"></span>
-      <span className="block w-6 h-1 bg-black mb-1"></span>
-    </button>
+    <div className="relative">
+      <button id="menu-button" onClick={handleOpenOrCloseMenu} className=" relative mr-4 md:hidden cursor-pointer">
+        <span className="block w-6 h-1 bg-black mb-1"></span>
+        <span className="block w-6 h-1 bg-black mb-1"></span>
+        <span className="block w-6 h-1 bg-black mb-1"></span>
+      </button>
+      {isMenuOpen && <MenuNav/>}
+    </div>
 
     {/* Menu de navegação */}
     <nav
