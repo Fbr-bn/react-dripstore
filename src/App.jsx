@@ -1,6 +1,8 @@
 import React from "react";
-import Footer from "./components/Footer"; 
-
+import { Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import HeaderMobile from "./components/HeaderMobile";
+import ProductDetails from "./pages/ProductDetails";
 
 const infoLinks = [
   "Sobre Drip Store",
@@ -23,13 +25,12 @@ const phone = "(85) 99972-1749";
 function App() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white">
-   
+      <HeaderMobile />
       <main className="flex-grow">
-   
-        
+        <Routes>
+          <Route path="/" element={<ProductDetails />} />
+        </Routes>
       </main>
-
-    
       <Footer
         infoLinks={infoLinks}
         categoryLinks={categoryLinks}

@@ -20,7 +20,7 @@ const Footer = ({
   ];
 
   return (
-    <footer className="mx-auto mt-14 w-full bg-[#1F1F1F] py-10 text-white">
+    <footer className="mx-auto w-full bg-[#1F1F1F] py-10 text-white">
       <div className="mx-auto flex max-w-screen-2xl flex-col justify-center gap-8 px-4 py-1 md:flex-row md:gap-20 md:px-8 lg:px-28">
        
         <div className="mr-8">
