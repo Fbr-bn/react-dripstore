@@ -1,5 +1,6 @@
 import HeaderMobile from "./components/HeaderMobile";
 import tenisCarrossel from "../src/assets/tenis-carrossel.png";
+import ornamento from "../src/assets/Ornament.png";
 
 export default function App() {
   return (
@@ -32,10 +33,10 @@ export default function App() {
 
 
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-cente">
           <img src={tenisCarrossel} alt="Tênis Nike" className=" w-80 rotate-340 md:w-[500px] "/>
           <div>
-            <img src="Assets/Ornament 11.png" alt="" className=" absolute top-30 md:right-5 md:top-55 w-30 z-0 " />
+            <img src={ornamento} alt="" className=" absolute top-30 md:right-5 md:top-55 w-30 z-0 " />
           </div>         
         </div>
 

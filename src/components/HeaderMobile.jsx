@@ -12,7 +12,7 @@ export default function HeaderMobile() {
 
 
   return (
-     <header className="drop-shadow-md p-6  md:h-[160px]">
+     <header className=" drop-shadow-md p-6  md:h-[160px]">
   <div className="flex items-center">
     {/* Botão do menu */}
     <div className="relative">
