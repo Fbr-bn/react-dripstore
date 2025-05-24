@@ -1,6 +1,8 @@
 import { useState } from "react";
 import logoHeader from "../assets/logo-header.svg";
 import MenuNav from "./Nav"
+import Cart from "./MyCart"
+import Glass from "./Glass";
 
 export default function HeaderMobile() {
 
@@ -11,12 +13,26 @@ export default function HeaderMobile() {
   }
 
 
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  function handleOpenOrCloseCart() {
+    setIsCartOpen(!isCartOpen);
+  }
+
+
+  const [isGlassOpen, setIsGlassOpen] = useState(false);
+
+  function handleOpenOrGlassCart() {
+    setIsGlassOpen(!isGlassOpen);
+  }
+
+
   return (
      <header className=" drop-shadow-md p-6  md:h-[160px]">
   <div className="flex items-center">
     {/* Botão do menu */}
-    <div className="relative">
-      <button id="menu-button" onClick={handleOpenOrCloseMenu} className=" relative mr-4 md:hidden cursor-pointer">
+    <div className="absolute">
+      <button id="menu-button" onClick={handleOpenOrCloseMenu} className=" md:hidden cursor-pointer">
         <span className="block w-6 h-1 bg-black mb-1"></span>
         <span className="block w-6 h-1 bg-black mb-1"></span>
         <span className="block w-6 h-1 bg-black mb-1"></span>
@@ -53,7 +69,7 @@ export default function HeaderMobile() {
       </ul>
     </nav>
 
-    {/* Área central com logo e opções */}
+    {/* Área central com logo  */}
     <div className="flex items-center justify-center flex-1 space-x-4 ">
       {/* Logo */}
       <img
@@ -69,14 +85,19 @@ export default function HeaderMobile() {
           <input
             className="text-[1.2rem] focus:outline-none hidden md:block w-full"
             type="text"
-            name="name"
-            id="name"
+            name="pesquisar"
+            id="pesquisar"
             placeholder="Pesquisar produtos..."
           />
           {/* Ícone de busca */}
-          <label htmlFor="name">
-            <i className="fas fa-magnifying-glass hidden md:flex md:ml-15 opacity-50 hover:text-[#C92071] cursor-pointer"></i>
-          </label>
+          
+            
+              <label htmlFor="name">
+                <i onClick={handleOpenOrGlassCart} className="fas fa-magnifying-glass hidden md:flex md:ml-15 opacity-50 hover:text-[#C92071] cursor-pointer"></i>
+              {isGlassOpen && <Glass/>}
+              </label>
+            
+          
         </div>
         {/* Links de cadastro */}
         <a href="#" className="hidden md:block hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071] ">
@@ -87,7 +108,10 @@ export default function HeaderMobile() {
           Entrar
         </button>
         {/* Ícone de carrinho */}
-        <i className="fas fa-cart-shopping text-[#C92071] cursor-pointer"></i>
+        <div>
+          <i className="fas fa-cart-shopping text-[#C92071] cursor-pointer" onClick={handleOpenOrCloseCart}></i>
+          {isCartOpen && <Cart/>}
+        </div>
       </div>
     </div>
   </div>

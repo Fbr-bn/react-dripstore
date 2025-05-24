@@ -33,10 +33,12 @@ export default function App() {
 
 
         </div>
-        <div className="flex justify-between items-cente">
-          <img src={tenisCarrossel} alt="Tênis Nike" className=" w-80 rotate-340 md:w-[500px] "/>
+        <div className=" flex justify-between items-cente">
+          <div className="">
+            <img src={tenisCarrossel} alt="Tênis Nike" className=" w-80 rotate-340 md:w-[500px] "/>
+            </div>
           <div>
-            <img src={ornamento} alt="" className=" absolute top-30 md:right-5 md:top-55 w-30 z-0 " />
+            <img src={ornamento} alt="imagem Ornamento" className="absolute top-30 md:right-5 md:top-55 w-30  " />
           </div>         
         </div>
 
