@@ -2,7 +2,7 @@ export default function Glass() {
   
 
   return (
-    <div className="md:hidden fixed bg-white w-[480px] h-[70.5px] top-[79px] left-[3px] flex justify-center items-center" >
+    <div className="md:hidden fixed bg-white w-full h-[70.5px] top-[79px] left-[3px] flex justify-center items-center" >
        
       
        <div className="p-4 flex justify-center items-center

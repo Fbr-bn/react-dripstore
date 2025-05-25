@@ -7,31 +7,28 @@ import Glass from "./Glass";
 export default function HeaderMobile() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isGlassOpen, setIsGlassOpen] = useState(false); 
 
   function handleOpenOrCloseMenu() {
     setIsMenuOpen(!isMenuOpen);
-  }
-
-
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  }  
 
   function handleOpenOrCloseCart() {
     setIsCartOpen(!isCartOpen);
-  }
-
-
-  const [isGlassOpen, setIsGlassOpen] = useState(false);
+  }  
 
   function handleOpenOrGlassCart() {
     setIsGlassOpen(!isGlassOpen);
   }
 
+ 
 
   return (
-     <header className=" drop-shadow-md p-6  md:h-[160px]">
+     <header className="fixed top-0 left-0 w-full z-50 drop-shadow-md p-6 md:h-[160px] bg-white">
   <div className="flex items-center">
     {/* Botão do menu */}
-    <div className="absolute">
+    <div className="absolute z-50">
       <button id="menu-button" onClick={handleOpenOrCloseMenu} className=" md:hidden cursor-pointer">
         <span className="block w-6 h-1 bg-black mb-1"></span>
         <span className="block w-6 h-1 bg-black mb-1"></span>

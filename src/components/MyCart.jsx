@@ -5,10 +5,10 @@ export default function Nav() {
   
 
   return (
-    <div >
+    <div className="z-50" >
        
       
-        <div className="absolute bg-white w-[315.43px] h-[454px] top-[50px] left-[-280px] p-[30px] gap-[20px]">
+        <div className="absolute bg-white w-[315.43px] h-[454px] top-[50px] left-[-280px] p-[30px] gap-[20px] md:left-[500px]">
             <h2 className="text-xl font-semibold mb-2">Meu Carrinho</h2>
             <div className="border-t border-gray-300 mb-4"></div>
             
@@ -36,9 +36,15 @@ export default function Nav() {
             
 
             {/* Botão */}
-            <button className="w-full bg-[#C92071] text-white py-2 rounded-[5px] font-semibold hover:border-b-2 hover:bg-pink-700 cursor-pointer">
-                Ver Carrinho
-            </button>
+             <div className="flex flex-row justify-center items-center gap-7">
+                 <a href="#" className=" hover:border-[#C92071]
+                  text-[#474747] hover:text-[#C92071]  cursor-pointer underline ">
+                    Esvaziar
+                  </a>
+                             <button className="w-[150px] h-[40px]  bg-[#C92071] text-white py-2 rounded-[5px] font-semibold hover:border-b-2 hover:bg-pink-700 cursor-pointer">
+                    Ver Carrinho
+                             </button>
+             </div>
         </div>
         
       

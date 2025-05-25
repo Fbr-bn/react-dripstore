@@ -17,8 +17,8 @@ export default function Nav() {
             <button className=" w-[248px] bg-[#C92071] text-white h-[40px] rounded-[5px] cursor-pointer">
                 Entrar
               </button>
-              <a href="#" className=" hover:border-b-2 hover:border-[#C92071] 
-              text-[#474747] hover:text-[#C92071]  cursor-pointer ">
+              <a href="#" className="  hover:border-[#C92071] 
+              text-[#474747] hover:text-[#C92071]  cursor-pointer underline">
                 Cadastre-se
               </a>
           </div>
