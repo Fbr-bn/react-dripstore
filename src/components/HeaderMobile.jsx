@@ -40,27 +40,27 @@ export default function HeaderMobile() {
     {/* Menu de navegação */}
     <nav
       id="menu"
-      className="hidden md:flex md:flex-row md:mt-30 md:top-[px] md:left-[60px] absolute top-0  mt-12 mr-4"
+      className="hidden md:flex md:flex-row md:mt-30 md:top-[px] md:left-[60px] absolute top-0  mt-12 mr-4 "
     >
-      <ul className="flex flex-col items-start gap-2 md:flex-row">
+      <ul className="flex flex-col items-start gap-10 md:flex-row">
         <li>
           <a href="#" className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">
-            Início
+            Home
           </a>
         </li>
         <li>
           <a href="#" className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">
-            Especialidades
+            Produtos
           </a>
         </li>
         <li>
           <a href="#" className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">
-            Quem Somos
+            Categorias
           </a>
         </li>
         <li>
           <a href="#" className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]">
-            Depoimentos
+            Meus Pedidos
           </a>
         </li>
       </ul>
