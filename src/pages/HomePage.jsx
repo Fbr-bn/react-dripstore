@@ -329,7 +329,7 @@ export default function HomePage() {
         {/* <!-- Conteúdo principal --> */}
         <div className="flex flex-col md:flex-row gap-6">
           {/* <!-- Filtros --> */}
-          <aside className="w-[308px] h-fit bg-white p-4 rounded hidden md:block w-[220px] shrink-0">
+          <aside className="h-fit bg-white p-4 rounded hidden md:block w-[220px] shrink-0">
             <h3 className="text-xl font-bold text-gray-700 pb-5 mb-4 border-b border-gray-300">
               Filtrar por
             </h3>
