@@ -76,7 +76,7 @@ export default function ProductInfo() {
         </div>
       </div>
 
-      <button className="w-full py-3 bg-[#FFB31F] text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 mt-8 mb-5 cursor-pointer">
+      <button className="w-full md:w-[30%] py-3 bg-[#FFB31F] text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 mt-8 mb-5 cursor-pointer">
         COMPRAR
       </button>
     </div>
