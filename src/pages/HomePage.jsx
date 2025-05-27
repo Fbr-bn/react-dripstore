@@ -1,7 +1,4 @@
 import HeaderMobile from "./components/HeaderMobile";
-import tenisCarrossel from "../src/assets/tenis-carrossel.png";
-import ornamento from "../src/assets/Ornament.png";
-
 import Carrossel from "./components/Carrossel";
 import FundoTenis from "./assets/fundoDesign.png";
 import FundoCamisa from "./assets/fundoDesignCamisa.png";
@@ -18,7 +15,7 @@ import Tenis1 from "./assets/tenis1.svg";
 import Tenis2 from "./assets/tenis2.svg";
 import TenisProdutos from "./assets/tenisProdutos.png";
 
-export default function App() {
+export default function HomePage() {
   return (
     <div>
       <HeaderMobile />
