@@ -1,7 +1,8 @@
 export default function PageCart(){
+    return(
+ <LayoutWrapper>
+ <div>
     
-    <div>
-    <LayoutWrapper>
 <div className="mt-4 max-w-7xl mx-auto hidden sm:block">
           <div className="flex justify-between items-center mb-4">
             <p className="text-sm text-gray-600">Produtos Relacionados</p>
@@ -92,8 +93,10 @@ export default function PageCart(){
             </div>
           </div>
         </div>
-
+   </div>
     </LayoutWrapper>
 
-</div>
+
+    )
+   
 };
