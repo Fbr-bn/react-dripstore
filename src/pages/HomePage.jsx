@@ -1,26 +1,30 @@
-import HeaderMobile from "./components/HeaderMobile";
-import Carrossel from "./components/Carrossel";
-import FundoTenis from "./assets/fundoDesign.png";
-import FundoCamisa from "./assets/fundoDesignCamisa.png";
-import FundoFone from "./assets/fundoDesignFone.png";
-import Camisa1 from "./assets/camisa1.svg";
-import Camisa2 from "./assets/camisa2.svg";
-import Calca1 from "./assets/calca1.svg";
-import Calca2 from "./assets/calca2.svg";
-import Calca3 from "./assets/calca3.svg";
-import Calca4 from "./assets/calca4.svg";
-import Fone1 from "./assets/fone1.svg";
-import Fone2 from "./assets/fone2.svg";
-import Tenis1 from "./assets/tenis1.svg";
-import Tenis2 from "./assets/tenis2.svg";
-import TenisProdutos from "./assets/tenisProdutos.png";
+import LayoutWrapper from "../components/LayoutWrapper"
+import Carrossel from "../components/Carrossel";
+
+import FundoTenis from "../assets/fundoDesign.png";
+import FundoCamisa from "../assets/fundoDesignCamisa.png";
+import FundoFone from "../assets/fundoDesignFone.png";
+import Camisa1 from "../assets/camisa1.svg";
+import Camisa2 from "../assets/camisa2.svg";
+import Calca1 from "../assets/calca1.svg";
+import Calca2 from "../assets/calca2.svg";
+import Calca3 from "../assets/calca3.svg";
+import Calca4 from "../assets/calca4.svg";
+import Fone1 from "../assets/fone1.svg";
+import Fone2 from "../assets/fone2.svg";
+import Tenis1 from "../assets/tenis1.svg";
+import Tenis2 from "../assets/tenis2.svg";
+import TenisProdutos from "../assets/tenisProdutos.png";
+import TenisJordan from "../assets/laye.png"
+
 
 export default function HomePage() {
   return (
     <div>
-      <HeaderMobile />
+      <LayoutWrapper>
       <Carrossel />
-      <div className="flex flex-col-reverse justify-center items-center bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] ">
+      <div className="flex flex-col-reverse justify-center items-center 
+      bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] ">
         {/* <div className="  flex flex-col justify-center items-center gap-3">
           
             <p className="text-[#C92071]">Melhores ofertas personalizadas</p>
@@ -288,456 +292,261 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* <!-- Cabeçalho e ordenação --> */}
-        <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-          <h2 className="font-bold">
-            Resultados para “Tênis” -{" "}
-            <span className="font-extralight">389 produtos</span>
-          </h2>
-          <div className="flex justify-between gap-7">
-            <div className="border-2 p-2 rounded border-[#000000]">
-              <label className="font-bold">Ordenar por:</label>
-              <select className="bg-[#F9F8FE] font-extralight px-2 py-1 ">
-                <option className="">Mais relevantes</option>
-                <option className="hover:bg-sky-700">Menor preço</option>
-                <option>Maior preço</option>
-              </select>
-            </div>
-            <button className="p-4 rounded bg-pink-600 text-white hidden max-[375px]:inline-flex">
-              {/* <!-- Ícone de filtro --> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div className="container mx-auto px-4 sm:px-8 py-6 bg-[#F9F8FE]">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl font-semibold text-gray-800">Produtos em alta</h2>
+          <a href="#" className="text-lg sm:text-sm text-pink-500 hover:underline">
+            Ver todos →
+          </a>
+        </div>
+  
+        <div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
+        >
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 14.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 019 17v-2.586L3.293 6.707A1 1 0 013 6V4z"
+                <span
+                  className="top-2 left-2 bg-lime-200 text-green-700 text-xs font-semibold px-4 py-1 rounded-full"
+                  >30% OFF</span
+                >
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
                 />
-              </svg>
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span
+                  className="top-2 left-2 bg-lime-200 text-green-700 text-xs font-semibold px-4 py-1 rounded-full"
+                  >30% OFF</span
+                >
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full">30% OFF</span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
+              <div
+                className="bg-white p-4 relative rounded hover:shadow-lg transition"
+              >
+                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
+                <img
+                  src={TenisProdutos}
+                  alt="Tênis"
+                  className="mx-auto cursor-pointer"
+                />
+              </div>
+              <div className="bg-[#F9F8FE] p-4">
+                <p className="text-gray-400 text-xs">Tênis</p>
+                <h3 className="font-medium mb-1">K-Swiss V8 - Masculino</h3>
+                <div className="text-sm mt-1">
+                  <span className="line-through text-gray-400 mr-2">$200</span>
+                  <span className="font-bold text-gray-900">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+      
+      
+      <section className="bg-gray-100">
+      <div className="max-w-screen-xl mx-auto px-4 py-12">
+        <div
+          className="flex flex-col md:flex-row md:items-center justify-center gap-8"
+        >
+          <div className="relative w-64 h-64 flex-shrink-0 mx-auto md:mx-0">
+            <div
+              className="absolute inset-0 rounded-full bg-gradient-to-b from-[#4200FF]/20 to-white/20"
+            >
+              <img
+                src={TenisJordan}
+                alt="Air Jordan"
+                className="w-full h-full object-contain transform -rotate-12"
+              />
+            </div>
+          </div>
+
+          <div className="md-w-md text-left flex-shrink-0 mx-auto md:mx-0">
+            <span className="text-[#C92071] font-semibold">Oferta especial</span>
+            <h2 className="text-4xl font-bold text-[#474747] mt-3">
+              Air Jordan edição <span className="block">de colecionador</span>
+            </h2>
+            <div
+              className="font-light text-gray-700 text-[#474747] mt-6 md:text-balance"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              </p>
+              <p>
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim
+              </p>
+              <p>
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut
+              </p>
+              <p>aliquip</p>
+            </div>
+            <button
+              className="bg-[#C92071] text-white mt-4 px-8 py-3 rounded-lg hover:bg-[#a81a5f] transition cursor-pointer"
+            >
+              Ver Oferta
             </button>
           </div>
         </div>
-
-        {/* <!-- Conteúdo principal --> */}
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* <!-- Filtros --> */}
-          <aside className="h-fit bg-white p-4 rounded hidden md:block w-[220px] shrink-0">
-            <h3 className="text-xl font-bold text-gray-700 pb-5 mb-4 border-b border-gray-300">
-              Filtrar por
-            </h3>
-
-            <div className="mb-4">
-              <h4 className="text-sm font-bold mb-2">Marca</h4>
-              <ul className="space-y-1 text-sm">
-                <li className="">
-                  <input
-                    type="checkbox"
-                    checked
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Adidas
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Balenciaga
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    checked
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  K-Swiss
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Nike
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Puma
-                </li>
-              </ul>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="text-sm font-bold mb-2">Categoria</h4>
-              <ul className="space-y-1 text-sm">
-                <li>
-                  <input
-                    type="checkbox"
-                    checked
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Esporte e lazer
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Casual
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Utilitário
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Corrida
-                </li>
-              </ul>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="text-sm font-bold mb-2">Gênero</h4>
-              <ul className="space-y-1 text-sm">
-                <li>
-                  <input
-                    type="checkbox"
-                    checked
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Masculino
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Feminino
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
-                  />{" "}
-                  Unissex
-                </li>
-              </ul>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="text-sm font-bold mb-2">Estado</h4>
-              <div className="flex flex-col gap-2 text-sm">
-                {/* <!-- Opção "Novo" --> */}
-
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="estado"
-                    value="novo"
-                    className="hidden peer"
-                    checked
-                  />
-                  <div className="w-3 h-3 rounded-full border-2 border-white-400 peer-checked:bg-pink-600 peer-checked:ring-2 peer-checked:ring-pink-300 transition"></div>
-                  <span>Novo</span>
-                </label>
-
-                {/* <!-- Opção "Usado" --> */}
-
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="estado"
-                    value="usado"
-                    className="hidden peer"
-                  />
-                  <div className="w-3 h-3 rounded-full border-2 border-white-400 peer-checked:bg-pink-600 peer-checked:ring-2 peer-checked:ring-pink-300 transition"></div>
-                  <span>Usado</span>
-                </label>
-              </div>
-            </div>
-          </aside>
-
-          {/* <!-- Lista de Produtos --> */}
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
-            {/* <!-- Produto --> */}
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 bg-[#E7FF86] text-xs font-bold px-4  py-1 rounded-full">
-                  30% OFF
-                </span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 bg-[#E7FF86] text-xs font-semibold px-4 py-1 rounded-full">
-                  30% OFF
-                </span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bbg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="cursor-pointer">
-              <div className="bg-white p-4 relative rounded shadow hover:shadow-lg transition">
-                <span className="top-2 left-2 px-4 py-1 rounded-full"></span>
-                <img src={TenisProdutos} alt="Tênis" className="mx-auto" />
-              </div>
-              <div className="bg-[#F9F8FE] p-4">
-                <p className="text-gray-400 text-xs">Tênis</p>
-                <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                  K-Swiss V8 - Masculino
-                </div>
-                <div className="text-sm">
-                  <span className="line-through text-gray-400">$200</span>
-                  <span className="text-black font-bold">$100</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+    </section>
+
+    </LayoutWrapper>
     </div>
   );
 }
