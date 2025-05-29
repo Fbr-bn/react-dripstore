@@ -1,19 +1,8 @@
-import React, {useEffect, useState } from "react";
-import axios from "axios";
 
 
-function ApiTenis(){
-    const [produtos, setProdutos] = useState([]);
 
-    useEffect(()=> {
-        axios.get("http://localhost:3000/produtos")
-        .then((response) =>{
-            setProdutos(response.data);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }, []);
+function ContainerCardsTenis({produtos}){
+    
 
     return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 cursor-pointer">
@@ -49,4 +38,4 @@ function ApiTenis(){
 
 }
 
-export default ApiTenis;
+export default ContainerCardsTenis;
