@@ -29,7 +29,7 @@ export default function HomePage() {
           axios.get("http://localhost:3001/produtos")
           .then((response) =>{
 
-              setProdutos(response.data);
+              setProdutos(response.data.slice(0,8));
           })
           .catch((error) => {
               console.error(error);
