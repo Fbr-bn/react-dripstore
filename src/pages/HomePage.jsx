@@ -1,19 +1,20 @@
-import HeaderMobile from "./components/HeaderMobile";
-import Carrossel from "./components/Carrossel";
-import FundoTenis from "./assets/fundoDesign.png";
-import FundoCamisa from "./assets/fundoDesignCamisa.png";
-import FundoFone from "./assets/fundoDesignFone.png";
-import Camisa1 from "./assets/camisa1.svg";
-import Camisa2 from "./assets/camisa2.svg";
-import Calca1 from "./assets/calca1.svg";
-import Calca2 from "./assets/calca2.svg";
-import Calca3 from "./assets/calca3.svg";
-import Calca4 from "./assets/calca4.svg";
-import Fone1 from "./assets/fone1.svg";
-import Fone2 from "./assets/fone2.svg";
-import Tenis1 from "./assets/tenis1.svg";
-import Tenis2 from "./assets/tenis2.svg";
-import TenisProdutos from "./assets/tenisProdutos.png";
+import HeaderMobile from "../components/HeaderMobile";
+import Carrossel from "../components/Carrossel";
+import FundoTenis from "../assets/fundoDesign.png";
+import FundoCamisa from "../assets/fundoDesignCamisa.png";
+import FundoFone from "../assets/fundoDesignFone.png";
+
+import Camisa1 from "../assets/camisa1.svg";
+import Camisa2 from "../assets/camisa2.svg";
+import Calca1 from "../assets/calca1.svg";
+import Calca2 from "../assets/calca2.svg";
+import Calca3 from "../assets/calca3.svg";
+import Calca4 from "../assets/calca4.svg";
+import Fone1 from "../assets/fone1.svg";
+import Fone2 from "../assets/fone2.svg";
+import Tenis1 from "../assets/tenis1.svg";
+import Tenis2 from "../assets/tenis2.svg";
+import TenisProdutos from "../assets/tenisProdutos.png";
 
 export default function HomePage() {
   return (
