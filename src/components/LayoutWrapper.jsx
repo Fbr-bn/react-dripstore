@@ -1,6 +1,6 @@
-import Footer from "./Footer";
-import HeaderMobile from "./HeaderMobile";
-import React from "react";
+import HeaderMobile from "../components/HeaderMobile";
+import Footer from "../components/Footer";
+
 
 export default function LayoutWrapper({ children }) {
   return (
