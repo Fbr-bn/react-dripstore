@@ -5,7 +5,7 @@ export default function PageConfirmation() {
   return (
     <div className="bg-linear-to-bl from-[#b5b6f2] to-[#efefff]">
       <LayoutWrapper>
-        <div className="flex justify-center items-cente  xl:ml-[-220px] p-8">
+        <div className="md:pt-[160px] flex justify-center items-cente  xl:ml-[-220px] p-8">
           <h2 className=" space-y-50 font-bold flex justify-center items-center  text-3xl  xl:ml-[-850px] text-center">
             Finalizar compra
           </h2>
