@@ -4,9 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductDetails from "./pages/ProductDetails";
 import MyOrders from "./pages/MyOrders";
+<<<<<<< HEAD
+import PageConfirmation from "./pages/PageConfirmation";
+=======
 import AccountLogin from "./pages/AccountLogin";
 import FormAccount from "./pages/FormAccount";
 import AccoutCreate from "./pages/AccountCreate";
+>>>>>>> main
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/form-create" element={<FormAccount />} />
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/my-orders" element={<MyOrders />} />
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
