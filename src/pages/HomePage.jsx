@@ -1,4 +1,4 @@
-import LayoutWrapper from "../components/LayoutWrapper"
+import LayoutWrapper from "../components/LayoutWrapper";
 import Carrossel from "../components/Carrossel";
 
 import FundoTenis from "../assets/fundoDesign.png";
@@ -15,28 +15,24 @@ import Fone2 from "../assets/fone2.svg";
 import Tenis1 from "../assets/tenis1.svg";
 import Tenis2 from "../assets/tenis2.svg";
 import TenisProdutos from "../assets/tenisProdutos.png";
-import TenisJordan from "../assets/laye.png"
+import TenisJordan from "../assets/laye.png";
 import ApiTenis from "../components/ContainerCardsTenis";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
 export default function HomePage() {
-
   const [produtos, setProdutos] = useState([]);
-  
-      useEffect(()=> {
-          axios.get("http://localhost:3001/produtos")
-          .then((response) =>{
 
-              setProdutos(response.data.slice(0,8));
-          })
-          .catch((error) => {
-              console.error(error);
-          });
-      }, []);
-
-
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/produtos")
+      .then((response) => {
+        setProdutos(response.data.slice(0, 8));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div>
