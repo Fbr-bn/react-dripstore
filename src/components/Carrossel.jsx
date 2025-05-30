@@ -2,12 +2,8 @@ register();
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-<<<<<<< HEAD
-import "swiper/css/scrollbar"; 
-import "swiper/css/autoplay"
-=======
 import "swiper/css/scrollbar";
->>>>>>> main
+import "swiper/css/autoplay";
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,37 +13,6 @@ import img3 from "../assets/TenisCarrossel3.jpeg";
 import img4 from "../assets/TenisCarrossel4.jpeg";
 
 export default function Carrossel() {
-<<<<<<< HEAD
-    const data = [
-        {image: img1}, 
-        {image: img2}, 
-        {image: img3}, 
-        {image: img4}, 
-        
-    ]
-    return(
-        <div className=" h-64 md:h-100"> 
-            
-            <Swiper slidesPerView={1}
-                pagination={{clickable: true}}
-                navigation
-                autoplay={{delay: 2000}}>
-                
-                {data.map((item, index) => (
-                <SwiperSlide key={index}>
-                
-                    <img
-                     src={item.image}
-                     alt="" 
-                     className="w-full h-[480px] object-cover md:h-[600px]"/>
-                </SwiperSlide>
-
-                ))}
-            </Swiper>
-        </div>
-    )
-}
-=======
   const data = [
     { image: img1 },
     { image: img2 },
@@ -70,4 +35,3 @@ export default function Carrossel() {
     </div>
   );
 }
->>>>>>> main
