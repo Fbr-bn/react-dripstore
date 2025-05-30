@@ -1,4 +1,4 @@
-import LayoutWrapper from "../components/LayoutWrapper"
+import LayoutWrapper from "../components/LayoutWrapper";
 import Carrossel from "../components/Carrossel";
 
 import FundoTenis from "../assets/fundoDesign.png";
@@ -15,39 +15,33 @@ import Fone2 from "../assets/fone2.svg";
 import Tenis1 from "../assets/tenis1.svg";
 import Tenis2 from "../assets/tenis2.svg";
 import TenisProdutos from "../assets/tenisProdutos.png";
-import TenisJordan from "../assets/laye.png"
+import TenisJordan from "../assets/laye.png";
 import ApiTenis from "../components/ContainerCardsTenis";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
 export default function HomePage() {
-
   const [produtos, setProdutos] = useState([]);
-  
-      useEffect(()=> {
-          axios.get("http://localhost:3001/produtos")
-          .then((response) =>{
 
-              setProdutos(response.data.slice(0,8));
-          })
-          .catch((error) => {
-              console.error(error);
-          });
-      }, []);
-
-
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/produtos")
+      .then((response) => {
+        setProdutos(response.data.slice(0, 8));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div>
       <LayoutWrapper>
         <Carrossel />
         <div
-          className="flex flex-col-reverse justify-center items-center 
+          className="pt-[160px] flex flex-col-reverse justify-center items-center 
       bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] "
-        >
-          
-        </div>
+        ></div>
 
         <div className="bg-[#f9f9ff] text-[#474747] flex justify-center items-center font-sans">
           <div className=" px-4 p-[15rem] sm:px-8  w-full">
