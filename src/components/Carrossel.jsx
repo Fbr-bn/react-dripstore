@@ -20,24 +20,19 @@ export default function Carrossel() {
         {image: img4}, 
         
     ]
-    return(
-        <div className=" h-64 md:h-100"> 
-            
-            <Swiper slidesPerView={1}
-                pagination={{clickable: true}}
-                navigation>
-                
-                {data.map((item, index) => (
-                <SwiperSlide key={index}>
-                
-                    <img
-                     src={item.image}
-                     alt="" 
-                     className="w-full h-[480px] object-cover md:h-[600px]"/>
-                </SwiperSlide>
-
-                ))}
-            </Swiper>
-        </div>
-    )
+    return (
+      <div className=" pt-[160px] h-64 md:h-100">
+        <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation>
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={item.image}
+                alt=""
+                className="w-full h-[480px] object-cover md:h-[600px]"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    );
 }

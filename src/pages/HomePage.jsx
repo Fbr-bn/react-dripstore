@@ -43,11 +43,9 @@ export default function HomePage() {
       <LayoutWrapper>
         <Carrossel />
         <div
-          className="flex flex-col-reverse justify-center items-center 
+          className="pt-[160px] flex flex-col-reverse justify-center items-center 
       bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] "
-        >
-          
-        </div>
+        ></div>
 
         <div className="bg-[#f9f9ff] text-[#474747] flex justify-center items-center font-sans">
           <div className=" px-4 p-[15rem] sm:px-8  w-full">

@@ -88,7 +88,7 @@ export default function HeaderMobile() {
           />
 
           {/* Área de busca e ações */}
-          <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[450px] ">
+          <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[650px] ">
             {/* Campo de busca */}
             <div className="p-4 flex gap-4 w-full xl:w-[550px] md:h-[50px] md:bg-gray-50 md:rounded-[5px] ">
               <input
