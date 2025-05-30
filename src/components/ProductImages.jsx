@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import sneakerImg from "../assets/White-Sneakers-PNG-Clipart.png";
-import { ChevronLeft, ChevronRight } from "lucide-react"; 
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const colorsBg = ["#E2E3FF", "#FFE8BC", "#FFC0BC", "#DEC699", "#E8DFCF"];
 const sneakersByColor = [
@@ -22,7 +22,6 @@ export default function ProductImages() {
 
   return (
     <div className="flex flex-col items-center p-8 pt-2 px-10 h-fit drop-shadow-md">
-     
       <div className="relative flex items-center justify-center">
         <button
           onClick={handlePrev}
@@ -50,7 +49,7 @@ export default function ProductImages() {
         </button>
       </div>
 
-      {/* Miniaturas */}
+      
       <div className="flex gap-2 mt-4 flex-nowrap justify-center drop-shadow-md">
         {colorsBg.map((bgColor, index) => (
           <div

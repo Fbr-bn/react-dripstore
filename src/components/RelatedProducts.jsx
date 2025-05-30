@@ -1,37 +1,20 @@
-import React from "react";
-import swissK8 from "../assets/swissK8.png"; 
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ApiTenis from "../components/ContainerCardsTenis"; 
 
-export default function RelatedProducts() {
-  const related = [
-    {
-      id: 1,
-      name: "K-Swiss V8 - Masculino",
-      oldPrice: 200,
-      newPrice: 100,
-      hasDiscount: true,
-    },
-    {
-      id: 2,
-      name: "K-Swiss V8 - Masculino",
-      oldPrice: 200,
-      newPrice: 100,
-      hasDiscount: true,
-    },
-    {
-      id: 3,
-      name: "K-Swiss V8 - Masculino",
-      oldPrice: 200,
-      newPrice: 100,
-      hasDiscount: false,
-    },
-    {
-      id: 4,
-      name: "K-Swiss V8 - Masculino",
-      oldPrice: 200,
-      newPrice: 100,
-      hasDiscount: false,
-    },
-  ];
+const RelatedProducts = () => {
+  const [produtos, setRelatedProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/produtos")
+      .then((response) => {
+        setRelatedProducts(response.data.slice(0, 4));
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar produtos:", error);
+      });
+  }, []);
 
   return (
     <div className="mt-6 px-6 pb-2">
@@ -44,36 +27,9 @@ export default function RelatedProducts() {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {related.map(({ id, name, oldPrice, newPrice, hasDiscount }) => (
-          <div
-            key={id}
-            className="hover:bg-gray-600 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
-          >
-            <div className="bg-white p-1 relative">
-              {hasDiscount && (
-                <span className="absolute top-2 left-2 bg-[#E7FF86] text-xs font-semibold px-4 rounded-full">
-                  30% OFF
-                </span>
-              )}
-              <img src={swissK8} alt="Tênis" className="mx-auto" />
-            </div>
-
-            <div className="bg-[#F9F8FE] p-2">
-              <p className="text-gray-400 text-xs">Tênis</p>
-              <div className="text-sm font-semibold max-[375px]:truncate max-[375px]:overflow-hidden max-[375px]:whitespace-nowrap">
-                {name}
-              </div>
-              <div className="text-sm">
-                <span className="line-through text-gray-400 mr-2">
-                  ${oldPrice}
-                </span>
-                <span className="text-black font-bold">${newPrice}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <ApiTenis produtos={produtos} />
     </div>
   );
-}
+};
+
+export default RelatedProducts;
