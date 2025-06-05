@@ -3,6 +3,7 @@ import logoHeader from "../assets/logo-header.svg";
 import MenuNav from "./Nav";
 import Cart from "./MyCart";
 import Glass from "./Glass";
+import { Link } from "react-router-dom";
 
 export default function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,13 +45,13 @@ export default function HeaderMobile() {
         >
           <ul className="flex flex-col items-start gap-10 md:flex-row">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/home"
                 className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
               >
                 Home
-              </a>
-            </li>
+              </Link>
+             </li>  
             <li>
               <a
                 href="#"
@@ -68,12 +69,12 @@ export default function HeaderMobile() {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/my-orders"
                 className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
               >
                 Meus Pedidos
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -88,7 +89,7 @@ export default function HeaderMobile() {
           />
 
           {/* Área de busca e ações */}
-          <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[650px] ">
+          <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[450px] ">
             {/* Campo de busca */}
             <div className="p-4 flex gap-4 w-full xl:w-[550px] md:h-[50px] md:bg-gray-50 md:rounded-[5px] ">
               <input
