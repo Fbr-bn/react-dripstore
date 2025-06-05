@@ -8,6 +8,7 @@ import PageConfirmation from "./pages/PageConfirmation";
 import FormAccount from "./pages/FormAccount";
 import AccountLogin from "./pages/AccountLogin";
 import AccoutCreate from "./pages/AccountCreate";
+import PageCart from "./pages/PageCart";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/confirmation" element={<PageConfirmation />} />
+        <Route path="/page-cart" element={<PageCart />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
