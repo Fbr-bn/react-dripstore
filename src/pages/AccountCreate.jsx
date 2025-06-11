@@ -1,58 +1,76 @@
+import React from "react";
+import { Link } from "react-router-dom"; // Importando o Link para navegação
 import LogoHeader from "../assets/logo-header.svg";
-import LogoEmail from "../assets/gmail.png"
-import LogoFacebook from "../assets/facebook.login.png"
-import TenisLogin4 from "../assets/tenislogin4.png"
+import LogoEmail from "../assets/gmail.png";
+import LogoFacebook from "../assets/facebook.login.png";
+import TenisLogin4 from "../assets/tenislogin4.png";
+import Footer from "../components/Footer";
 
+export default function AccountCreate() {
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center">
+        <header className="flex w-full items-center justify-center p-5 xl:p-10">
+          <div className="flex flex-1 items-center justify-center space-x-4">
+            <img
+              src={LogoHeader}
+              alt="DripStore Logo"
+              className="w-50 xl:w-[253px] xl:h-[44px]"
+            />
+          </div>
+        </header>
 
-export default function AccoutCreate(){
-    return(
-        <div className="flex flex-col items-center justify-center">
-             <header className="bg-white w-full flex justify-center items-cente p-5 xl:p-10 xl:flex xl:justify-start xl:h-[]">
-        <div className="flex items-center justify-center flex-1 space-x-4">
-            <img src={LogoHeader} alt="" 
-            className="w-50 xl:absolute xl:top-[px] xl:left-[70px] xl:w-[253px] xl:h-[44px]"/>
+        {/* A classe py-10 e pb-20 foi adicionada aqui para criar o espaçamento */}
+        <div className="w-full bg-gradient-to-bl from-[#b5b6f2] to-[#efefff] py-10 pb-20">
+          <div className="flex items-center justify-center">
+            <div className="flex h-auto w-[315px] flex-col gap-5 rounded-lg bg-white p-[30px] shadow-xl md:h-auto md:w-[500px]">
+              <div>
+                <h2 className="text-center text-2xl">Crie sua conta</h2>
+                <h3 className="mb-4 text-center">
+                  Já possui uma conta?
+                  {/* Link funcional para a página de login */}
+                  <Link to="/login" className="cursor-pointer text-[#C92071] underline hover:text-pink-700">
+                    {" "}
+                    Entre aqui
+                  </Link>
+                </h3>
+              </div>
+
+              <div>
+                <p>Email</p>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Insira seu login ou email"
+                  className="w-full rounded border border-gray-200 bg-gray-50 p-2 opacity-50 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                />
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  className="h-[40px] w-full cursor-pointer rounded-lg border border-[#C92071] bg-[#C92071] text-white"
+                >
+                  Criar conta
+                </button>
+              </div>
+              <h3 className="flex items-center justify-center">
+                Ou faça login com
+              </h3>
+              <div className="flex h-auto items-center justify-center gap-4">
+                <img src={LogoEmail} alt="Login com Gmail" className="cursor-pointer" />
+                <img src={LogoFacebook} alt="Login com Facebook" className="cursor-pointer" />
+              </div>
+            </div>
+
+            <div className="hidden md:block">
+              <img src={TenisLogin4} alt="Imagem de um tênis" className="max-w-md" />
+            </div>
+          </div>
         </div>
-    </header>
-    <div className="bg-linear-to-bl from-[#b5b6f2] to-[#efefff] w-full">
-        <div className="flex items-center justify-center  ">
-            <div className="bg-white flex flex-col  w-[315px]
-                        h-[400px] top-[171px] left-[30px] p-[30px]
-                        rounded-lg shadow-xl mt-15 gap-5 md:w-[500px] md:h-[400px]">
-                <div>
-                    <h2 className="text-2xl flex justify-center items-center">Crie sua conta </h2>
-                    <h3 className="text-center mb-4">
-                        Já possui uma conta? Entre <a href="#" className=" underline cursor-pointer hover:text-[#C92071]"> aqui</a>
-                      </h3>
-                </div>
-        
-                <div>
-                    <p>Email </p>
-                    <input type="text" name="email" id="email"
-                    placeholder="Insira seu login ou email" className="opacity-50 w-full p-2 border bg-gray-200 border-gray-50 rounded 
-                    focus:outline-none focus:ring-2 focus:ring-pink-400"/>
-        
-                </div>
-        
-                <div>
-                    <button type="submit" className="text-white bg-[#C92071] bordeR-[#C92071]
-                    cursor-pointer w-full h-[40px] rounded-lg">Criar conta</button>
-                </div>
-                <h3 className="flex justify-center items-center">Ou faça login</h3>
-                <div className="flex justify-center items-center gap-4 h-[0px] ">
-                    <img src={LogoEmail} alt="" className="cursor-pointer"/>
-                    <img src={LogoFacebook} alt="" className="cursor-pointer"/>
-        
-            </div>
-            
-            
-            </div>
-                <div className="md:flex md:flex-row  md:block hidden ">
-                    <img src={TenisLogin4}alt="" className=""/>
-                </div>
-            </div>
-    </div>
-    </div>
-        
-        
-    )
+      </div>
+      <Footer />
+    </>
+  );
 }

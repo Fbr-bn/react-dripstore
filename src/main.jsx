@@ -9,6 +9,7 @@ import FormAccount from "./pages/FormAccount";
 import AccountLogin from "./pages/AccountLogin";
 import AccoutCreate from "./pages/AccountCreate";
 import { Navigate } from "react-router-dom";
+import MyInformation from "./pages/MyInformation";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/confirmation" element={<PageConfirmation />} />
+        <Route path="/my-information" element={<MyInformation />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -110,23 +110,23 @@ export default function HeaderMobile() {
               </label>
             </div>
             {/* Links de cadastro */}
-            <a
-              href="#"
-              className="hidden md:block hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071] "
+            <Link
+              to="/create"
+              className="hidden text-[#474747] hover:border-b-2 hover:border-[#C92071] hover:text-[#C92071] md:block "
             >
               Cadastre-se
-            </a>
+            </Link>
             {/* Botão de login */}
-            <button className="hidden md:block bg-[#C92071] text-white w-[114px] h-[40px] rounded-[5px] cursor-pointer">
-              Entrar
-            </button>
+            <Link to="/login">
+              <button className="hidden h-[40px] w-[114px] cursor-pointer rounded-[5px] bg-[#C92071] text-white md:block">
+                Entrar
+              </button>
+            </Link>
             {/* Ícone de carrinho */}
             <div>
-              <i
-                className="fas fa-cart-shopping text-[#C92071] cursor-pointer"
-                onClick={handleOpenOrCloseCart}
-              ></i>
-              {isCartOpen && <Cart />}
+              <Link to="#">
+              <i className="fas fa-cart-shopping cursor-pointer text-[#C92071]"></i>
+            </Link>
             </div>
           </div>
         </div>
