@@ -18,7 +18,15 @@ const RelatedProducts = () => {
 
   return (
     <div className="mt-6 px-6 pb-2">
-      <RelatedProducts />
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xl font-semibold text-[#474747]">
+          Produtos Relacionados
+        </h2>
+        <a href="#" className="text-[#C92071] hover:underline">
+          Ver todos →
+        </a>
+      </div>
+
       <ApiTenis produtos={produtos} />
     </div>
   );

@@ -24,7 +24,6 @@ function QuantityButton({ initialQuantity = 1, onQuantityChange }) {
 
   return (
     <div className="flex items-center justify-center bg-white border border-gray-300 shadow-sm">
-      {/* Botão de Decrementar */}
       <button
         onClick={handleDecrement}
         className="px-4 py-2 text-gray-700 rounded-l-lg hover:bg-gray-100 disabled:opacity-50"
@@ -47,12 +46,10 @@ function QuantityButton({ initialQuantity = 1, onQuantityChange }) {
         </svg>
       </button>
 
-      {/* Visor da Quantidade */}
       <span className="px-5 py-2 text-lg font-semibold text-gray-800 border-l border-r border-gray-300">
         {quantity}
       </span>
 
-      {/* Botão de Incrementar */}
       <button
         onClick={handleIncrement}
         className="px-4 py-2 text-gray-700 rounded-r-lg hover:bg-gray-100"
@@ -77,21 +74,16 @@ function QuantityButton({ initialQuantity = 1, onQuantityChange }) {
   );
 }
 
-// Componente principal de teste
-export default function App() {
-  const [productQuantity, setProductQuantity] = useState(1);
-
-  const handleProductQuantityChange = (newQuantity) => {
-    console.log("A nova quantidade do produto é:", newQuantity);
-    setProductQuantity(newQuantity);
+// Componente principal exportado
+export default function QuantidadeItens({ quantity, setQuantity }) {
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
   };
 
   return (
-    <div className="p-4">
-      <QuantityButton
-        initialQuantity={productQuantity}
-        onQuantityChange={handleProductQuantityChange}
-      />
-    </div>
+    <QuantityButton
+      initialQuantity={quantity}
+      onQuantityChange={handleQuantityChange}
+    />
   );
 }
