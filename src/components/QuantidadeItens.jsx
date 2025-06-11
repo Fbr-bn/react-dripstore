@@ -23,7 +23,7 @@ function QuantityButton({ initialQuantity = 1, onQuantityChange }) {
   };
 
   return (
-    <div className="flex items-center justify-center bg-white border border-gray-300 rounded-lg shadow-sm">
+    <div className="flex items-center justify-center bg-white border border-gray-300 shadow-sm">
       {/* Botão de Decrementar */}
       <button
         onClick={handleDecrement}
@@ -88,7 +88,6 @@ export default function App() {
 
   return (
     <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">Produto</h1>
       <QuantityButton
         initialQuantity={productQuantity}
         onQuantityChange={handleProductQuantityChange}
