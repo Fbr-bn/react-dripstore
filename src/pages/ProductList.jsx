@@ -6,14 +6,46 @@ import SidebarFilters from "../components/SidebarFilters";
 export default function ProductList() {
   return (
     <LayoutWrapper>
-      <div className="pt-[160px] max-w-7xl mx-auto px-4 py-6">
-        {/* ... Cabeçalho aqui ... */}
+      <div className="pt-[180px] max-w-7xl mx-auto px-4 py-6">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+          <h2 className="font-bold">
+            Resultados para “Tênis” -{" "}
+            <span className="font-extralight">389 produtos</span>
+          </h2>
+          <div className="flex justify-between gap-7">
+            <div className="border-2 p-2 rounded border-[#000000]">
+              <label className="font-bold">Ordenar por:</label>
+              <select className="bg-[#F9F8FE] font-extralight px-2 py-1 cursor-pointer">
+                <option>Mais relevantes</option>
+                <option>Menor preço</option>
+                <option>Maior preço</option>
+              </select>
+            </div>
+            <button className="p-4 rounded bg-pink-600 text-white md:hidden inline-flex cursor-pointer">
+              {/* Ícone de filtro */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 14.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 019 17v-2.586L3.293 6.707A1 1 0 013 6V4z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
 
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="bg-amber-200 flex flex-col md:flex-row gap-6">
           <SidebarFilters />
 
           {/* Lista de produtos */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+          <div className="bg-amber-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
             <ListProducts />
           </div>
         </div>
