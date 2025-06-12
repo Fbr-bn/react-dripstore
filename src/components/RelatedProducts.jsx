@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ApiTenis from "../components/ContainerCardsTenis"; 
+import ApiTenis from "../components/ContainerCardsTenis";
 
 const RelatedProducts = () => {
   const [produtos, setRelatedProducts] = useState([]);
