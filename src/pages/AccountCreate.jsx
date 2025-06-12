@@ -1,26 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Importando o Link para navegação
+import { Link } from "react-router-dom";
+import LogoFacebook from "../assets/facebook.login.png";
 import LogoHeader from "../assets/logo-header.svg";
 import LogoEmail from "../assets/gmail.png";
-import LogoFacebook from "../assets/facebook.login.png";
 import TenisLogin4 from "../assets/tenislogin4.png";
 import Footer from "../components/Footer";
 
-export default function AccountCreate() {
+export default function AccoutCreate() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
         <header className="flex w-full items-center justify-center p-5 xl:p-10">
           <div className="flex flex-1 items-center justify-center space-x-4">
-            <img
-              src={LogoHeader}
-              alt="DripStore Logo"
-              className="w-50 xl:w-[253px] xl:h-[44px]"
-            />
+            <Link to="/">
+              <img
+                src={LogoHeader}
+                alt="Digital Store Logo"
+                className="w-50 cursor-pointer xl:h-[44px] xl:w-[253px]"
+              />
+            </Link>
           </div>
         </header>
 
-        {/* A classe py-10 e pb-20 foi adicionada aqui para criar o espaçamento */}
         <div className="w-full bg-gradient-to-bl from-[#b5b6f2] to-[#efefff] py-10 pb-20">
           <div className="flex items-center justify-center">
             <div className="flex h-auto w-[315px] flex-col gap-5 rounded-lg bg-white p-[30px] shadow-xl md:h-auto md:w-[500px]">
@@ -28,14 +28,15 @@ export default function AccountCreate() {
                 <h2 className="text-center text-2xl">Crie sua conta</h2>
                 <h3 className="mb-4 text-center">
                   Já possui uma conta?
-                  {/* Link funcional para a página de login */}
-                  <Link to="/login" className="cursor-pointer text-[#C92071] underline hover:text-pink-700">
+                  <Link
+                    to="/login"
+                    className="cursor-pointer text-[#C92071] underline hover:text-pink-700"
+                  >
                     {" "}
                     Entre aqui
                   </Link>
                 </h3>
               </div>
-
               <div>
                 <p>Email</p>
                 <input
@@ -46,7 +47,6 @@ export default function AccountCreate() {
                   className="w-full rounded border border-gray-200 bg-gray-50 p-2 opacity-50 focus:outline-none focus:ring-2 focus:ring-pink-400"
                 />
               </div>
-
               <div>
                 <button
                   type="submit"
@@ -59,13 +59,24 @@ export default function AccountCreate() {
                 Ou faça login com
               </h3>
               <div className="flex h-auto items-center justify-center gap-4">
-                <img src={LogoEmail} alt="Login com Gmail" className="cursor-pointer" />
-                <img src={LogoFacebook} alt="Login com Facebook" className="cursor-pointer" />
+                <img
+                  src={LogoEmail}
+                  alt="Login com Gmail"
+                  className="cursor-pointer"
+                />
+                <img
+                  src={LogoFacebook}
+                  alt="Login com Facebook"
+                  className="cursor-pointer"
+                />
               </div>
             </div>
-
             <div className="hidden md:block">
-              <img src={TenisLogin4} alt="Imagem de um tênis" className="max-w-md" />
+              <img
+                src={TenisLogin4}
+                alt="Imagem de um tênis"
+                className="max-w-md"
+              />
             </div>
           </div>
         </div>

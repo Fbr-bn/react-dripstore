@@ -11,20 +11,16 @@ export default function AccountLogin() {
       <div className="flex flex-col items-center justify-center">
         <header className="flex w-full items-center justify-center p-5 xl:p-10">
           <div className="flex flex-1 items-center justify-center space-x-4">
-            <img
-              src={LogoHeader}
-              alt=""
-              className="w-50 xl:h-[44px] xl:w-[253px]"
-            />
+            <Link to="/">
+              <img
+                src={LogoHeader}
+                alt="Digital Store Logo"
+                className="w-50 cursor-pointer xl:h-[44px] xl:w-[253px]"
+              />
+            </Link>
           </div>
         </header>
 
-        {/* A MUDANÇA ESTÁ AQUI:
-          Em vez de margin (mb-), usamos padding (py- ou pb-).
-          A classe py-10 md:py-20 já adiciona um bom espaçamento.
-          Para aumentar, basta aumentar esses números.
-          Ex: py-10 md:py-20 pb-20 md:pb-40
-        */}
         <div className="w-full bg-gradient-to-bl from-[#b5b6f2] to-[#efefff] py-10 md:py-20 pb-20 md:pb-40">
           <div className="flex items-center justify-center">
             <div className="flex h-auto w-[315px] flex-col gap-5 rounded-lg bg-white p-[30px] shadow-xl md:h-auto md:w-[450px]">
@@ -87,7 +83,11 @@ export default function AccountLogin() {
               </div>
             </div>
             <div className="hidden md:block">
-              <img src={TenisLogin4} alt="Imagem de um tênis" className="max-w-md" />
+              <img
+                src={TenisLogin4}
+                alt="Imagem de um tênis"
+                className="max-w-md"
+              />
             </div>
           </div>
         </div>

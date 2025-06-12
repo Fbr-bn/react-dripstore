@@ -82,11 +82,13 @@ export default function HeaderMobile() {
         {/* Área central com logo  */}
         <div className="flex items-center justify-center flex-1 space-x-4 ">
           {/* Logo */}
-          <img
-            src={logoHeader}
-            alt="Logo"
-            className=" md:absolute md:top-[42px] md:left-[60px] md:w-[253px] md:h-[44px]"
-          />
+          <Link to="/">
+  <img
+    src={logoHeader}
+    alt="Logo"
+    className="cursor-pointer md:absolute md:top-[42px] md:left-[60px] md:h-[44px] md:w-[253px]"
+  />
+</Link>
 
           {/* Área de busca e ações */}
           <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[450px] ">
@@ -125,7 +127,9 @@ export default function HeaderMobile() {
             {/* Ícone de carrinho */}
             <div>
               <Link to="#">
-              <i className="fas fa-cart-shopping cursor-pointer text-[#C92071]"></i>
+              <i className="fas fa-cart-shopping cursor-pointer text-[#C92071]"  onClick={handleOpenOrCloseCart}></i>
+                          {isCartOpen && <Cart />}
+
             </Link>
             </div>
           </div>
