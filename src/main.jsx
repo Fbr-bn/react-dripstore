@@ -8,6 +8,7 @@ import PageConfirmation from "./pages/PageConfirmation";
 import FormAccount from "./pages/FormAccount";
 import AccountLogin from "./pages/AccountLogin";
 import AccoutCreate from "./pages/AccountCreate";
+import { Navigate } from "react-router-dom";
 import PageCart from "./pages/PageCart";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
