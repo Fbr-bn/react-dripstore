@@ -59,16 +59,22 @@ export default function PageCart() {
       setFrete(15);
     }
   };
-
+  <h2 className="text-lg sm:text-xl font-bold mb-4">Meu Carrinho</h2>;
   return (
     <LayoutWrapper>
       <main className="bg-[#F5F5F5] pt-45 pb-10 ">
         <div className="container mx-auto p-4 sm:p-6">
           <div className="flex flex-col lg:flex-row gap-4 max-w-7xl mx-auto">
             <div className="bg-white shadow-md rounded-lg p-4 flex-1 min-h-[300px]">
-              <h2 className="text-lg sm:text-xl font-bold mb-4">
-                Meu Carrinho
-              </h2>
+              {/* Títulos das colunas */}
+              <div className="hidden sm:flex items-center text-gray-600 text-xs uppercase border-b border-gray-200 pb-2 mb-4 px-1">
+                <div className="flex-1">Produto</div>
+                <div className="w-24 text-center">Quantidade</div>
+                <div className="w-24 text-center">Unitário</div>
+                <div className="w-24 text-center">Total</div>
+              </div>
+
+              <div class="hidden sm:flex text-center text-gray-600 text-xs uppercase gap-4"></div>
               {quantity > 0 ? (
                 <>
                   <CartItem

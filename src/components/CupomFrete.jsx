@@ -9,7 +9,7 @@ export default function CupomFrete({
   onCalculateFrete,
 }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mt-4">
+    <div className="flex flex-col sm:flex-row gap-4 mt-10">
       <div className="flex-1">
         <h3 className="text-xs font-semibold mb-1">Cupom de Desconto</h3>
         <div className="flex items-center gap-1">
@@ -22,7 +22,7 @@ export default function CupomFrete({
           />
           <button
             onClick={onApplyCoupon}
-            className="w-12 h-12 py-3 rounded-lg text-sm font-bold bg-gray-100 text-[#C92071] hover:bg-gray-200"
+            className="w-12 h-12 py-3 rounded-lg text-sm font-bold bg-gray-100 text-[#C92071] hover:bg-gray-200 cursor-pointer"
           >
             OK
           </button>
@@ -40,7 +40,7 @@ export default function CupomFrete({
           />
           <button
             onClick={onCalculateFrete}
-            className="w-12 h-12 py-3 rounded-lg text-sm font-bold bg-gray-100 text-[#C92071] hover:bg-gray-200"
+            className="w-12 h-12 py-3 rounded-lg text-sm font-bold bg-gray-100 text-[#C92071] hover:bg-gray-200 cursor-pointer"
           >
             OK
           </button>

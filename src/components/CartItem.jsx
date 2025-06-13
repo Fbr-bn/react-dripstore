@@ -6,7 +6,7 @@ export default function CartItem({
   onRemove,
 }) {
   return (
-    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-b border-gray-200 pb-2 mb-4 px-1">
       <div className="bg-[#B5B6F2] w-25 h-21 rounded p-4 flex items-center justify-center">
         <img
           src="./src/assets/d52bcba86d839d9bc81eba71990cf69a20c77364 (1).png"
@@ -27,7 +27,7 @@ export default function CartItem({
             <div className="flex items-center mb-1">
               <button
                 onClick={onDecrease}
-                className="px-4 py-1 bg-gray-200 text-xs cursor-pointer"
+                className="px-2 py-1 bg-gray-200 text-xs cursor-pointer"
               >
                 -
               </button>
@@ -39,7 +39,7 @@ export default function CartItem({
               />
               <button
                 onClick={onIncrease}
-                className="px-3 py-1 bg-gray-200 text-xs cursor-pointer"
+                className="px-2 py-1 bg-gray-200 text-xs cursor-pointer"
               >
                 +
               </button>
@@ -65,6 +65,7 @@ export default function CartItem({
 
           {/* Total */}
           <div className="flex flex-col items-center w-full sm:w-20 gap-1">
+            <p class="text-xs uppercase text-gray-600 sm:hidden">TOTAL</p>
             <span className="text-xs line-through text-gray-400">
               R$ {product.originalPrice * quantity}
             </span>
