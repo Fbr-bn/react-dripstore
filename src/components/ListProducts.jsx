@@ -17,7 +17,7 @@ const ListProducts = () => {
   }, []);
 
   return (
-    <div className="max-w-72xl mx-auto px-4 py-6">
+    <div className="max-w-72xl mx-auto">
       {/* Cabeçalho e ordenação */}
 
       <ApiTenis produtos={produtos} />

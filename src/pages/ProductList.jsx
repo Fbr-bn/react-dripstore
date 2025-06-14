@@ -1,17 +1,21 @@
+import { useState } from "react";
 import LayoutWrapper from "../components/LayoutWrapper";
 import ListProducts from "../components/ListProducts";
 import RelatedProducts from "../components/RelatedProducts";
 import SidebarFilters from "../components/SidebarFilters";
 
 export default function ProductList() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado para abrir/fechar o filtro lateral no mobile
+
   return (
     <LayoutWrapper>
-      <div className="pt-[180px] max-w-7xl mx-auto px-4 py-6">
-        <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+      <div className="bg-[#F9F8FE] pt-[180px] mx-auto px-4 py-6 pb-30">
+        <div className="flex flex-col-reverse w-full md:flex-row justify-between md:items-center mb-6 gap-8">
           <h2 className="font-bold">
             Resultados para “Tênis” -{" "}
             <span className="font-extralight">389 produtos</span>
           </h2>
+
           <div className="flex justify-between gap-7">
             <div className="border-2 p-2 rounded border-[#000000]">
               <label className="font-bold">Ordenar por:</label>
@@ -21,8 +25,12 @@ export default function ProductList() {
                 <option>Maior preço</option>
               </select>
             </div>
-            <button className="p-4 rounded bg-pink-600 text-white md:hidden inline-flex cursor-pointer">
-              {/* Ícone de filtro */}
+
+            {/* Botão rosa (filtro mobile) */}
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="p-4 rounded bg-pink-600 text-white md:hidden inline-flex cursor-pointer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -41,11 +49,15 @@ export default function ProductList() {
           </div>
         </div>
 
-        <div className="bg-amber-200 flex flex-col md:flex-row gap-6">
-          <SidebarFilters />
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Sidebar recebendo props para abrir/fechar no mobile */}
+          <SidebarFilters
+            isOpen={isSidebarOpen}
+            onClose={() => setIsSidebarOpen(false)}
+          />
 
           {/* Lista de produtos */}
-          <div className="bg-amber-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
+          <div className="w-full md:w-3/4">
             <ListProducts />
           </div>
         </div>
