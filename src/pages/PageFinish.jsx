@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutWrapper from "../components/LayoutWrapper"; // ajuste o caminho se necessário
+import LayoutWrapper from "../components/LayoutWrapper";
 import ReciboCompra from "../components/ReciboCompra";
 
 const PageFinish = () => {

@@ -26,7 +26,6 @@ const ReciboCompra = ({ dados }) => {
   return (
     <div className="bg-[#F9F8FE] pt-[180px] flex flex-col items-center mt-8 px-4">
       <div className="bg-white w-full max-w-3xl p-6 rounded-md">
-        {/* Cabeçalho */}
         <div className="flex flex-col items-center border-b border-gray-200 pb-4 mb-4">
           <div className="text-6xl mb-2">🎉</div>
           <span className="text-2xl font-bold text-center">
@@ -35,7 +34,6 @@ const ReciboCompra = ({ dados }) => {
           <span className="text-2xl font-bold text-center">com sucesso!</span>
         </div>
 
-        {/* Informações Pessoais */}
         <div className="border-b border-gray-200 pb-4 mb-4">
           <h3 className="font-bold mb-2">Informações Pessoais</h3>
           <div className="space-y-1 text-sm break-words">
