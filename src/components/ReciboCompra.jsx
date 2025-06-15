@@ -125,7 +125,7 @@ const ReciboCompra = ({ dados }) => {
         <div className="text-center mt-6">
           <button
             onClick={() => window.print()}
-            className="text-sm underline text-gray-600 hover:text-gray-800 cursor-pointer"
+            className="text-sm text-gray-600 hover:underline hover:text-gray-800 cursor-pointer"
           >
             Imprimir Recibo
           </button>
