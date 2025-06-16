@@ -1,4 +1,5 @@
 import TenisCarrinho from "../assets/tenis-finalizar-compras.png"
+import { Link } from 'react-router-dom';
 
 
 export default function Nav() {
@@ -41,9 +42,12 @@ export default function Nav() {
                   text-[#474747] hover:text-[#C92071]  cursor-pointer underline ">
                     Esvaziar
                   </a>
-                             <button className="w-[150px] h-[40px]  bg-[#C92071] text-white py-2 rounded-[5px] font-semibold hover:border-b-2 hover:bg-pink-700 cursor-pointer">
-                    Ver Carrinho
-                             </button>
+                             <Link
+            to="/page-cart"
+            className="block w-[150px] h-[40px] leading-[40px] text-center bg-[#C92071] text-white rounded-[5px] font-semibold hover:bg-pink-700 cursor-pointer"
+          >
+            Ver Carrinho
+          </Link>
              </div>
         </div>
         
