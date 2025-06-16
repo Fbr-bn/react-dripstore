@@ -1,57 +1,98 @@
+import { Link } from "react-router-dom";
+import LogoFacebook from "../assets/facebook.login.png";
 import LogoHeader from "../assets/logo-header.svg";
-import LogoEmail from "../assets/gmail.png"
-import LogoFacebook from "../assets/facebook.login.png"
-import TenisLogin4 from "../assets/tenislogin4.png"
+import LogoEmail from "../assets/gmail.png";
+import TenisLogin4 from "../assets/tenislogin4.png";
+import Footer from "../components/Footer";
 
-export default function AccountLogin(){
-    return(
-        <div className="  flex flex-col items-center justify-center">
-            <header className="bg-white w-full flex justify-center items-cente p-5 xl:p-10 xl:flex xl:justify-start xl:h-[]">
-        <div className="flex items-center justify-center flex-1 space-x-4">
-            <img src={LogoHeader} alt="" className="w-50 xl:absolu
-            te xl:top-[px] xl:left-[70px] xl:w-[253px] xl:h-[44px]"/>
-        </div>
-    </header>
-    <div className=" bg-linear-to-bl from-[#b5b6f2] to-[#efefff] w-full">
-        <div className="flex items-center justify-center ">
-            <div className=" bg-white flex flex-col  w-[315px]
-                        h-[450px] top-[171px] left-[30px] p-[30px]
-                        rounded-lg shadow-xl mt-15 gap-5 md:w-[450px] md:h-[450px]">
-                <div>
-                    <h2 className="text-2xl flex justify-center items-center">Acessar sua conta </h2>
-                    <h3 className="text-center mb-4">
-                        Novo cliente? registre-se <a href="#" className=" underline cursor-pointer hover:text-[#C92071]"> aqui</a>
-                      </h3>
-                </div>
-        
-                <div>
-                    <p>Login </p>
-                    <input type="text" name="email" id="email"
-                    placeholder="Insira seu login ou email" 
-                    className="opacity-50 w-full p-2 border bg-gray-50 border-gray-50 rounded 
-                    focus:outline-none focus:ring-2 focus:ring-pink-400"/>
-                    <p>Senha</p>
-                    <input type="password" name="password" id="password"
-                     placeholder="Insira sua senha" 
-                     className="opacity-50 w-full p-2 border bg-gray-50 border-gray-50 rounded 
-                    focus:outline-none focus:ring-2 focus:ring-pink-400"/>
-                </div>
-                <a href="#" className="cursor-pointer underline hover:hover:text-[#C92071]">Esqueci minha senha </a>
-                <div>
-                    <button type="submit" className="text-white bg-[#C92071] bordeR-[#C92071]
-                    cursor-pointer w-full h-[40px] rounded-lg">Acessar conta</button>
-                </div>
-                <h3 className="flex justify-center items-center">Ou faça login</h3>
-                <div className="flex justify-center items-center gap-4 h-[0px] ">
-                    <img src={LogoEmail} alt="" className="cursor-pointer"/>
-                    <img src={LogoFacebook} alt="" className="cursor-pointer"/>
-                </div>
+export default function AccountLogin() {
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center">
+        <header className="flex w-full items-center justify-center p-5 xl:p-10">
+          <div className="flex flex-1 items-center justify-center space-x-4">
+            <Link to="/">
+              <img
+                src={LogoHeader}
+                alt="Digital Store Logo"
+                className="w-50 cursor-pointer xl:h-[44px] xl:w-[253px]"
+              />
+            </Link>
+          </div>
+        </header>
+
+        <div className="w-full bg-gradient-to-bl from-[#b5b6f2] to-[#efefff] py-10 md:py-20 pb-20 md:pb-40">
+          <div className="flex items-center justify-center">
+            <div className="flex h-auto w-[315px] flex-col gap-5 rounded-lg bg-white p-[30px] shadow-xl md:h-auto md:w-[450px]">
+              <div>
+                <h2 className="text-center text-2xl">Acessar sua conta</h2>
+                <h3 className="mb-4 text-center">
+                  Novo cliente?
+                  <Link
+                    to="/create"
+                    className="cursor-pointer text-[#C92071] underline hover:text-pink-700"
+                  >
+                    {" "}
+                    registre-se aqui
+                  </Link>
+                </h3>
+              </div>
+              <div>
+                <p>Login</p>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Insira seu login ou email"
+                  className="w-full rounded border border-gray-200 bg-gray-50 p-2 opacity-50 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                />
+                <p className="mt-2">Senha</p>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Insira sua senha"
+                  className="w-full rounded border border-gray-200 bg-gray-50 p-2 opacity-50 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                />
+              </div>
+              <a href="#" className="cursor-pointer underline hover:text-[#C92071]">
+                Esqueci minha senha
+              </a>
+              <div>
+                <button
+                  type="submit"
+                  className="h-[40px] w-full cursor-pointer rounded-lg border border-[#C92071] bg-[#C92071] text-white"
+                >
+                  Acessar conta
+                </button>
+              </div>
+              <h3 className="flex items-center justify-center">
+                Ou faça login com
+              </h3>
+              <div className="flex h-auto items-center justify-center gap-4">
+                <img
+                  src={LogoEmail}
+                  alt="Login com Gmail"
+                  className="cursor-pointer"
+                />
+                <img
+                  src={LogoFacebook}
+                  alt="Login com Facebook"
+                  className="cursor-pointer"
+                />
+              </div>
             </div>
-            <div className="md:flex md:flex-row  md:block hidden ">
-                <img src={TenisLogin4} alt="" className=" "/>                               
+            <div className="hidden md:block">
+              <img
+                src={TenisLogin4}
+                alt="Imagem de um tênis"
+                className="max-w-md"
+              />
             </div>
+          </div>
         </div>
-    </div>
-        </div>
-    )
+      </div>
+      <Footer />
+    </>
+  );
 }
