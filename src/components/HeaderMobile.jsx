@@ -82,11 +82,13 @@ export default function HeaderMobile() {
         {/* Área central com logo  */}
         <div className="flex items-center justify-center flex-1 space-x-4 ">
           {/* Logo */}
-          <img
-            src={logoHeader}
-            alt="Logo"
-            className=" md:absolute md:top-[42px] md:left-[60px] md:w-[253px] md:h-[44px]"
-          />
+          <Link to="/">
+  <img
+    src={logoHeader}
+    alt="Logo"
+    className="cursor-pointer md:absolute md:top-[42px] md:left-[60px] md:h-[44px] md:w-[253px]"
+  />
+</Link>
 
           {/* Área de busca e ações */}
           <div className="absolute right-5 flex items-center space-x-4 md:top-[42px] md:left-[350px] xl:left-[450px] ">
@@ -110,23 +112,25 @@ export default function HeaderMobile() {
               </label>
             </div>
             {/* Links de cadastro */}
-            <a
-              href="#"
-              className="hidden md:block hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071] "
+            <Link
+              to="/create"
+              className="hidden text-[#474747] hover:border-b-2 hover:border-[#C92071] hover:text-[#C92071] md:block "
             >
               Cadastre-se
-            </a>
+            </Link>
             {/* Botão de login */}
-            <button className="hidden md:block bg-[#C92071] text-white w-[114px] h-[40px] rounded-[5px] cursor-pointer">
-              Entrar
-            </button>
+            <Link to="/login">
+              <button className="hidden h-[40px] w-[114px] cursor-pointer rounded-[5px] bg-[#C92071] text-white md:block">
+                Entrar
+              </button>
+            </Link>
             {/* Ícone de carrinho */}
             <div>
-              <i
-                className="fas fa-cart-shopping text-[#C92071] cursor-pointer"
-                onClick={handleOpenOrCloseCart}
-              ></i>
-              {isCartOpen && <Cart />}
+              <Link to="#">
+              <i className="fas fa-cart-shopping cursor-pointer text-[#C92071]"  onClick={handleOpenOrCloseCart}></i>
+                          {isCartOpen && <Cart />}
+
+            </Link>
             </div>
           </div>
         </div>

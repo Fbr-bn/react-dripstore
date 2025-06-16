@@ -11,6 +11,9 @@ import AccoutCreate from "./pages/AccountCreate";
 import { Navigate } from "react-router-dom";
 import ProductList from "./pages/ProductList";
 import PageFinish from "./pages/PageFinish";
+import MyInformation from "./pages/MyInformation";
+import PageCart from "./pages/PageCart";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -26,6 +29,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/confirmation" element={<PageConfirmation />} />
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/recibo" element={<PageFinish />} />
+         <Route path="/my-information" element={<MyInformation />} /> 
+         <Route path="/page-cart" element={<PageCart />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
