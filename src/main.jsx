@@ -9,6 +9,7 @@ import FormAccount from "./pages/FormAccount";
 import AccountLogin from "./pages/AccountLogin";
 import AccoutCreate from "./pages/AccountCreate";
 import { Navigate } from "react-router-dom";
+import ProductList from "./pages/ProductList";
 import MyInformation from "./pages/MyInformation";
 import PageCart from "./pages/PageCart";
 
@@ -25,8 +26,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/my-orders" element={<MyOrders />} />
         <Route path="/confirmation" element={<PageConfirmation />} />
+        <Route path="/product-list" element={<ProductList />} />
          <Route path="/my-information" element={<MyInformation />} /> 
-          <Route path="/page-cart" element={<PageCart />} />
+         <Route path="/page-cart" element={<PageCart />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
