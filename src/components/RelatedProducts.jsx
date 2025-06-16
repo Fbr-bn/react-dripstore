@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ApiTenis from "../components/ContainerCardsTenis"; 
+import ApiTenis from "../components/ContainerCardsTenis";
 
 const RelatedProducts = () => {
   const [produtos, setRelatedProducts] = useState([]);
@@ -17,7 +17,7 @@ const RelatedProducts = () => {
   }, []);
 
   return (
-    <div className="mt-6 px-6 pb-2">
+    <div className="md:block hidden mt-6 px-6 pb-10 space-x-2">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-[#474747]">
           Produtos Relacionados

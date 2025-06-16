@@ -4,6 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import "swiper/css/autoplay";
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,7 +22,8 @@ export default function Carrossel() {
   ];
   return (
     <div className=" md:pt-[160px] h-64 md:h-100">
-      <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation>
+      <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation 
+      autoplay={{delay:2500}}>
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <img
