@@ -81,9 +81,18 @@ const SidebarFilters = ({ isOpen, onClose }) => {
 
   return (
     <>
+      {/* Overlay SÓ NO RESTANTE DA TELA */}
+      {isOpen && (
+        <div
+          onClick={onClose}
+          className="fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300"
+          style={{ left: "300px" }} // aplica a sombra só depois do sidebar de 300px
+        ></div>
+      )}
+
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-[300px] bg-white p-4 z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-23 left-0 h-full w-[300px] bg-white p-4 z-50 transform transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
