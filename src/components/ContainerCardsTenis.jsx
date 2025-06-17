@@ -15,7 +15,7 @@ function ContainerCardsTenis({ produtos }) {
               />
             </div>
             <div className="mt-4 text-sm text-gray-500">
-              {produto.categoria}
+              {produto.categoria?.nome}
             </div>
             <div className="text-base font-medium text-gray-800">
               <h3 className="font-medium mb-1">{produto.nome}</h3>

@@ -25,9 +25,11 @@ export default function HomePage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/produtos")
+      .get("http://localhost:3000/api/produtos")
       .then((response) => {
         setProdutos(response.data.slice(0, 8));
+
+        console.log("Produtos carregados:", response);
       })
       .catch((error) => {
         console.error(error);

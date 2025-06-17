@@ -9,7 +9,9 @@ const ListProducts = () => {
     axios
       .get("http://localhost:3000/api/produtos")
       .then((response) => {
-        setListProducts(response.data.slice(0, 15));
+        // Se a resposta for { produtos: [...] }
+        setListProducts(response.data.produtos.slice(0, 15));
+        // Se for um array direto, use response.data.slice(0, 15)
       })
       .catch((error) => {
         console.error("Erro ao buscar produtos:", error);
