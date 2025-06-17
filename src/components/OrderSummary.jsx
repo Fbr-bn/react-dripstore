@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TenisFinalizarCompras from "../assets/tenis-finalizar-compras.png";
 
 export default function OrderSummary() {
@@ -38,9 +39,12 @@ export default function OrderSummary() {
           <p className="font-semibold text-gray-800 text-lg">Total</p>
           <p className="text-sm text-gray-600">ou 10x de R$ 21,00 sem juros</p>
         </div>
-        <button className="bg-yellow-400 hover:bg-yellow-600 text-white font-semibold px-4 xl:py-2 rounded cursor-pointer">
+        <Link
+          to="/recibo"
+          className="bg-yellow-400 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded cursor-pointer text-center"
+        >
           Realizar Pagamento
-        </button>
+        </Link>
       </div>
     </div>
   );

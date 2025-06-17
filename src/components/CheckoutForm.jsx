@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CheckoutForm() {
   return (
     <form className="flex flex-col items-center px-4">
@@ -122,9 +124,12 @@ export default function CheckoutForm() {
               ou 10x de R$ 21,00 sem juros
             </p>
           </div>
-          <button className="bg-yellow-400 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors ml-1 cursor-pointer">
+          <Link
+            to="/recibo"
+            className="bg-yellow-400 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors ml-1 cursor-pointer text-center"
+          >
             Realizar Pagamento
-          </button>
+          </Link>
         </div>
       </div>
     </form>
