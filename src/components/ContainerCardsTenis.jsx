@@ -14,6 +14,7 @@ function ContainerCardsTenis({ produtos }) {
                 className="w-full h-auto object-contain"
               />
             </div>
+
             <div className="mt-4 text-sm text-gray-500">
               {produto.categoria?.nome}
             </div>
