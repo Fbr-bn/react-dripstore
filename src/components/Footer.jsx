@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="mt-5 border-t border-gray-800 px-4 pt-2 pb-0 text-center font-light text-gray-400">
         <p className="text-sm sm:text-base">
           © 2025 Digital College -<br className="sm:hidden" />
-          Devs. Fernando, Natan, Nilton e Lucas
+          Devs. Fernando, Natan, Nilton, Lucas e João
         </p>
       </div>
     </footer>

@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom"; // 1. Importe o Link
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import LayoutWrapper from "../components/LayoutWrapper";
 import Carrossel from "../components/Carrossel";
+import ApiTenis from "../components/ContainerCardsTenis";
 
 import FundoTenis from "../assets/fundoDesign.png";
 import FundoCamisa from "../assets/fundoDesignCamisa.png";
@@ -16,9 +21,6 @@ import Tenis1 from "../assets/tenis1.svg";
 import Tenis2 from "../assets/tenis2.svg";
 import TenisProdutos from "../assets/tenisProdutos.png";
 import TenisJordan from "../assets/laye.png";
-import ApiTenis from "../components/ContainerCardsTenis";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 export default function HomePage() {
   const [produtos, setProdutos] = useState([]);
@@ -40,7 +42,7 @@ export default function HomePage() {
         <Carrossel />
         <div
           className="pt-[160px] flex flex-col-reverse justify-center items-center 
-      bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] "
+     bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] "
         ></div>
 
         <div className="bg-[#f9f9ff] text-[#474747] flex justify-center items-center font-sans">
@@ -67,7 +69,7 @@ export default function HomePage() {
                     </h3>
                     <button
                       className="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] h-[3rem] 
-                  rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
+              rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
                     >
                       Comprar
                     </button>
@@ -93,7 +95,7 @@ export default function HomePage() {
                     </h3>
                     <button
                       className="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] h-[3rem] 
-                  rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
+              rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
                     >
                       Comprar
                     </button>
@@ -119,7 +121,7 @@ export default function HomePage() {
                     </h3>
                     <button
                       className="mt-4 bg-[#F5F5F5] text-[#C92071] w-[9.5625rem] 
-                  h-[3rem] rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
+              h-[3rem] rounded-lg hover:bg-[#e5e5e5] font-sans font-bold text-base leading-6 tracking-wider text-center cursor-pointer"
                     >
                       Comprar
                     </button>
@@ -139,9 +141,9 @@ export default function HomePage() {
                         src={Camisa1}
                         alt="Camiseta 1"
                         className="cursor-pointer absolute w-[400px] h-[200px] sm:w-14 sm:h-14 object-contain
-                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
-                     transition-opacity duration-500 ease-in-out 
-                     group-hover:opacity-0"
+                left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                transition-opacity duration-500 ease-in-out 
+                group-hover:opacity-0"
                       />
                       <img
                         src={Camisa2}
@@ -152,7 +154,7 @@ export default function HomePage() {
                   </div>
                   <p
                     className="text-center mt-2 text-sm sm:text-base font-bold
-                 text-[#474747] font-sans"
+             text-[#474747] font-sans"
                   >
                     Camiseta
                   </p>
@@ -165,22 +167,22 @@ export default function HomePage() {
                         src={Calca1}
                         alt="Calça 1"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
-                    transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                object-contain left-1/2 top-1/2 -translate-x-1/2 
+                transition-opacity duration-500 ease-in-out group-hover:opacity-0"
                       />
                       <img
                         src={Calca2}
                         alt="Calça 2"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2 
-                    -translate-y-1/2 transition-opacity duration-500 
-                    ease-in-out opacity-0 group-hover:opacity-100"
+                object-contain left-1/2 top-1/2 -translate-x-1/2 
+                -translate-y-1/2 transition-opacity duration-500 
+                ease-in-out opacity-0 group-hover:opacity-100"
                       />
                     </button>
                   </div>
                   <p
                     className="text-center mt-2 text-sm sm:text-base 
-                font-bold text-[#474747] font-sans"
+             font-bold text-[#474747] font-sans"
                   >
                     Calça
                   </p>
@@ -193,23 +195,23 @@ export default function HomePage() {
                         src={Calca3}
                         alt="Jaqueta 1"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2 
-                    -translate-y-1/2 transition-opacity duration-500 
-                    ease-in-out group-hover:opacity-0"
+                object-contain left-1/2 top-1/2 -translate-x-1/2 
+                -translate-y-1/2 transition-opacity duration-500 
+                ease-in-out group-hover:opacity-0"
                       />
                       <img
                         src={Calca4}
                         alt="Jaqueta 2"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2
-                     -translate-y-1/2 transition-opacity duration-500 
-                     ease-in-out opacity-0 group-hover:opacity-100"
+                object-contain left-1/2 top-1/2 -translate-x-1/2
+                 -translate-y-1/2 transition-opacity duration-500 
+                 ease-in-out opacity-0 group-hover:opacity-100"
                       />
                     </button>
                   </div>
                   <p
                     className="text-center mt-2 text-sm sm:text-base font-bold 
-                text-[#474747] font-sans"
+             text-[#474747] font-sans"
                   >
                     Jaqueta
                   </p>
@@ -222,23 +224,23 @@ export default function HomePage() {
                         src={Fone1}
                         alt="Acessório 1"
                         className="cursor-pointer absolute w-[200px] h-[100px] sm:w-14 
-                    sm:h-14 object-contain left-1/2 top-1/2 
-                    -translate-x-1/2 -translate-y-1/2 transition-opacity
-                     duration-500 ease-in-out group-hover:opacity-0"
+                sm:h-14 object-contain left-1/2 top-1/2 
+                -translate-x-1/2 -translate-y-1/2 transition-opacity
+                 duration-500 ease-in-out group-hover:opacity-0"
                       />
                       <img
                         src={Fone2}
                         alt="Acessório 2"
                         className="cursor-pointer absolute -[200px] h-[100px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2 
-                    -translate-y-1/2 transition-opacity duration-500 
-                    ease-in-out opacity-0 group-hover:opacity-100"
+                object-contain left-1/2 top-1/2 -translate-x-1/2 
+                -translate-y-1/2 transition-opacity duration-500 
+                ease-in-out opacity-0 group-hover:opacity-100"
                       />
                     </button>
                   </div>
                   <p
                     className="text-center mt-2 text-sm sm:text-base
-                 font-bold text-[#474747] font-sans"
+             font-bold text-[#474747] font-sans"
                   >
                     Acessório
                   </p>
@@ -251,23 +253,23 @@ export default function HomePage() {
                         src={Tenis1}
                         alt="Tênis"
                         className="cursor-pointer absolute w-[200px] h-[100px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2 
-                    -translate-y-1/2 transition-opacity duration-500
-                     ease-in-out group-hover:opacity-0"
+                object-contain left-1/2 top-1/2 -translate-x-1/2 
+                -translate-y-1/2 transition-opacity duration-500
+                 ease-in-out group-hover:opacity-0"
                       />
                       <img
                         src={Tenis2}
                         alt="Tênis"
                         className="cursor-pointer absolute w-[200px] h-[100px] sm:w-14 sm:h-14 
-                    object-contain left-1/2 top-1/2 -translate-x-1/2
-                     -translate-y-1/2 transition-opacity duration-500 
-                     ease-in-out opacity-0 group-hover:opacity-100"
+                object-contain left-1/2 top-1/2 -translate-x-1/2
+                 -translate-y-1/2 transition-opacity duration-500 
+                 ease-in-out opacity-0 group-hover:opacity-100"
                       />
                     </button>
                   </div>
                   <p
                     className="text-center mt-2 text-sm sm:text-base 
-                font-bold text-[#474747] font-sans"
+             font-bold text-[#474747] font-sans"
                   >
                     Tênis
                   </p>
@@ -282,12 +284,12 @@ export default function HomePage() {
             <h2 className="text-xl font-semibold text-gray-800">
               Produtos em alta
             </h2>
-            <a
-              href="#"
+            <Link
+              to="/product-list"
               className="text-lg sm:text-sm text-pink-500 hover:underline"
             >
               Ver todos →
-            </a>
+            </Link>
           </div>
 
           <ApiTenis produtos={produtos} />
