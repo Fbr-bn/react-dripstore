@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
+
 function ContainerCardsTenis({ produtos }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 cursor-pointer">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       {produtos.map((produto) => (
-        <div key={produto.id} className=" ">
-          <div className="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <Link to="/product-details" key={produto.id}>
+          <div className="h-full bg-white p-4 rounded shadow hover:shadow-lg transition cursor-pointer">
             <div className="relative">
               <span className="absolute top-2 left-2 bg-lime-200 text-lime-700 text-xs font-bold px-2 py-1 rounded-full">
                 {produto.desconto}
               </span>
               <img
                 src={produto.imagem}
-                alt="Tênis K-Swiss V8"
+                alt={produto.nome}
                 className="w-full h-auto object-contain"
               />
             </div>
@@ -29,7 +31,7 @@ function ContainerCardsTenis({ produtos }) {
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

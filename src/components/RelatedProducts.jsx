@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"; // 1. Importe o Link
 import ApiTenis from "../components/ContainerCardsTenis";
 
 const RelatedProducts = () => {
@@ -22,9 +23,11 @@ const RelatedProducts = () => {
         <h2 className="text-xl font-semibold text-[#474747]">
           Produtos Relacionados
         </h2>
-        <a href="#" className="text-[#C92071] hover:underline">
+        
+        {/* 2. O link <a> foi substituído pelo componente <Link> */}
+        <Link to="/product-list" className="text-[#C92071] hover:underline">
           Ver todos →
-        </a>
+        </Link>
       </div>
 
       <ApiTenis produtos={produtos} />

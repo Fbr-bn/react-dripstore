@@ -41,16 +41,16 @@ export default function HomePage() {
       <LayoutWrapper>
         <Carrossel />
         <div
-          className="pt-[160px] flex flex-col-reverse justify-center items-center 
+          className="  pt-[160px] flex flex-col-reverse justify-center items-center 
      bg-gray-100 gap-4 md:flex md:flex-row md:w-[1440] md:h-[1440] "
         ></div>
 
-        <div className="bg-[#f9f9ff] text-[#474747] flex justify-center items-center font-sans">
-          <div className=" px-4 p-[15rem] sm:px-8  w-full">
+        <div className=" bg-[#f9f9ff] text-[#474747] flex justify-center items-center font-sans">
+          <div className="px-4 p-[15rem] sm:px-8  w-full">
             <h2 className="text-base font-bold mb-6 text-[#474747]">
               Coleções em Destaque
             </h2>
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-row lg:flex-nowrap  justify-center">
+            <div className=" flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-row lg:flex-nowrap  justify-center">
               <div className=" relative w-full sm:w-[20rem] md:w-[25.3125rem]">
                 <img
                   src={FundoCamisa}
@@ -146,7 +146,7 @@ export default function HomePage() {
                 group-hover:opacity-0"
                       />
                       <img
-                        src={Camisa2}
+                        src={Camisa2} 
                         alt="Camiseta 2"
                         className="cursor-pointer absolute w-[400px] h-[200px] sm:w-14 sm:h-14 object-contain left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                       />
@@ -164,14 +164,15 @@ export default function HomePage() {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 group">
                     <button className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
                       <img
-                        src={Calca1}
+                        src={Calca3}
                         alt="Calça 1"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
                 object-contain left-1/2 top-1/2 -translate-x-1/2 
-                transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                -translate-y-1/2 transition-opacity duration-500 
+                ease-in-out group-hover:opacity-0"
                       />
                       <img
-                        src={Calca2}
+                        src={Calca4}
                         alt="Calça 2"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
                 object-contain left-1/2 top-1/2 -translate-x-1/2 
@@ -192,7 +193,7 @@ export default function HomePage() {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 group">
                     <button className="w-full h-full bg-white rounded-full flex items-center justify-center overflow-hidden">
                       <img
-                        src={Calca3}
+                        src={Calca1}
                         alt="Jaqueta 1"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
                 object-contain left-1/2 top-1/2 -translate-x-1/2 
@@ -200,7 +201,7 @@ export default function HomePage() {
                 ease-in-out group-hover:opacity-0"
                       />
                       <img
-                        src={Calca4}
+                        src={Calca2}
                         alt="Jaqueta 2"
                         className="cursor-pointer absolute w-[150px] h-[85px] sm:w-14 sm:h-14 
                 object-contain left-1/2 top-1/2 -translate-x-1/2
@@ -279,7 +280,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-8 py-6 bg-[#F9F8FE]">
+        <div className="container mx-auto px-4 sm:px-8 bg-[#F9F8FE]">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-gray-800">
               Produtos em alta
