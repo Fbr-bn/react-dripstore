@@ -7,7 +7,7 @@ const ListProducts = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/produtos")
+      .get("http://localhost:3000/api/produtos")
       .then((response) => {
         setListProducts(response.data.slice(0, 15));
       })
