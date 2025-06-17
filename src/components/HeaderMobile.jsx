@@ -53,12 +53,12 @@ export default function HeaderMobile() {
               </Link>
              </li>  
             <li>
-              <a
-                href="#"
-                className="hover:border-b-2 hover:border-[#C92071] text-[#474747] hover:text-[#C92071]"
+              <Link
+                to="/product-list"
+                className="text-[#474747] hover:border-b-2 hover:border-[#C92071] hover:text-[#C92071]"
               >
                 Produtos
-              </a>
+              </Link>
             </li>
             <li>
               <a
