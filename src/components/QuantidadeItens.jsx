@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// Componente do botão de quantidade
 function QuantityButton({ initialQuantity = 1, onQuantityChange }) {
   const [quantity, setQuantity] = useState(initialQuantity);
 

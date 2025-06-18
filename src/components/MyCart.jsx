@@ -1,7 +1,6 @@
 import TenisCarrinho from "../assets/tenis-finalizar-compras.png"
 import { Link } from 'react-router-dom';
 
-// Corrigindo o nome da função para corresponder ao arquivo e ao conteúdo
 export default function MyCart() { 
   return (
     <div className="z-50" >
@@ -9,7 +8,6 @@ export default function MyCart() {
         <h2 className="text-xl font-semibold mb-2">Meu Carrinho</h2>
         <div className="border-t border-gray-300 mb-4"></div>
         
-        {/* Produtos */}
         <div className="flex space-x-4 mb-4">
           <img src={TenisCarrinho} alt="Tênis Nike" className=" h-10 object-cover" />
           <div>
@@ -37,7 +35,6 @@ export default function MyCart() {
             Esvaziar
           </a>
           
-          {/* A ALTERAÇÃO ESTÁ AQUI */}
           <Link
             to="/cart" // Corrigido de "/page-cart" para "/cart"
             className="block w-[150px] h-[40px] leading-[40px] text-center bg-[#C92071] text-white rounded-[5px] font-semibold hover:bg-pink-700 cursor-pointer"

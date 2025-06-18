@@ -16,10 +16,8 @@ export default function PageConfirmation() {
         <div className="md:flex md:flex-row md:space-x-60">
           <CheckoutForm />
 
-          {/* Essa parte é o RESUMO */}
           <div className="px-11 md:-ml-60 xl:-ml-6">
             <OrderSummary />{" "}
-            {/* ou o bloco com imagem e valores, se ainda não virou componente */}
           </div>
         </div>
       </LayoutWrapper>

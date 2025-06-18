@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // 1. Importe o Link
+import { Link } from "react-router-dom"; 
 
 export default function ProductInfo() {
   const [selectedSize, setSelectedSize] = useState(null);
@@ -77,7 +77,6 @@ export default function ProductInfo() {
         </div>
       </div>
 
-      {/* 2. O botão foi substituído por um Link estilizado */}
       <Link
         to="/confirmation"
         className="block w-full md:w-[30%] py-3 bg-[#FFB31F] text-white text-center font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 mt-8 mb-5 cursor-pointer"

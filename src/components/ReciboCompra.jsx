@@ -5,7 +5,6 @@ import TenisCarrinho from "../assets/tenis-finalizar-compras.png";
 const ReciboCompra = ({ dados }) => {
   const navigate = useNavigate();
 
-  // Dados simulados (remova depois e substitua por dados reais via props ou contexto)
   const {
     nome = "Francisco Antonio Pereira",
     cpf = "123.485.913-35",
@@ -56,7 +55,6 @@ const ReciboCompra = ({ dados }) => {
           </div>
         </div>
 
-        {/* Informações de Entrega */}
         <div className="border-b border-gray-200 pb-4 mb-4">
           <h3 className="font-bold mb-2">Informações de Entrega</h3>
           <div className="space-y-1 text-sm break-words">
@@ -79,7 +77,6 @@ const ReciboCompra = ({ dados }) => {
           </div>
         </div>
 
-        {/* Informações de Pagamento */}
         <div className="border-b border-gray-200 pb-4 mb-4">
           <h3 className="font-bold mb-2">Informações de Pagamento</h3>
           <div className="space-y-1 text-sm break-words">
@@ -112,7 +109,6 @@ const ReciboCompra = ({ dados }) => {
           </div>
         </div>
 
-        {/* Total */}
         <div className="flex justify-between items-center bg-[#F6AA1C0D] border-[#F6AA1C26] border p-4 rounded">
           <span className="font-bold text-lg">Total</span>
           <div className="text-right">
@@ -121,7 +117,6 @@ const ReciboCompra = ({ dados }) => {
           </div>
         </div>
 
-        {/* Botão Imprimir */}
         <div className="text-center mt-6">
           <button
             onClick={() => window.print()}
@@ -132,7 +127,6 @@ const ReciboCompra = ({ dados }) => {
         </div>
       </div>
 
-      {/* Botão Final */}
       <div className="w-full max-w-3xl mt-6 mb-20 px-4">
         <button
           onClick={() => navigate("/")}

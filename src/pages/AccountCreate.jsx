@@ -9,8 +9,9 @@ export default function AccoutCreate() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <header className="flex w-full items-center justify-center p-5 xl:p-10">
-          <div className="flex flex-1 items-center justify-center space-x-4">
+        {/* A MUDANÇA ESTÁ AQUI: As classes do header foram ajustadas */}
+        <header className="flex w-full items-center bg-white p-5 xl:p-10">
+          <div className="container mx-auto">
             <Link to="/">
               <img
                 src={LogoHeader}
@@ -48,12 +49,12 @@ export default function AccoutCreate() {
                 />
               </div>
               <div>
-                <button
-                  type="submit"
-                  className="h-[40px] w-full cursor-pointer rounded-lg border border-[#C92071] bg-[#C92071] text-white"
+                <Link
+                  to="/form-create"
+                  className="flex h-[40px] w-full cursor-pointer items-center justify-center rounded-lg border border-[#C92071] bg-[#C92071] text-white"
                 >
                   Criar conta
-                </button>
+                </Link>
               </div>
               <h3 className="flex items-center justify-center">
                 Ou faça login com

@@ -9,8 +9,8 @@ export default function AccountLogin() {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <header className="flex w-full items-center justify-center p-5 xl:p-10">
-          <div className="flex flex-1 items-center justify-center space-x-4">
+        <header className="flex w-full items-center bg-white p-5 xl:p-10">
+          <div className="container mx-auto">
             <Link to="/">
               <img
                 src={LogoHeader}
@@ -59,12 +59,12 @@ export default function AccountLogin() {
                 Esqueci minha senha
               </a>
               <div>
-                <button
-                  type="submit"
-                  className="h-[40px] w-full cursor-pointer rounded-lg border border-[#C92071] bg-[#C92071] text-white"
+                <Link
+                  to="/"
+                  className="flex h-[40px] w-full cursor-pointer items-center justify-center rounded-lg border border-[#C92071] bg-[#C92071] text-white hover:bg-pink-700"
                 >
                   Acessar conta
-                </button>
+                </Link>
               </div>
               <h3 className="flex items-center justify-center">
                 Ou faça login com

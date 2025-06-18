@@ -7,7 +7,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         Filtrar por
       </h3>
 
-      {/* Marca */}
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Marca</h4>
         <ul className="space-y-1 text-sm">
@@ -23,7 +22,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         </ul>
       </div>
 
-      {/* Categoria */}
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Categoria</h4>
         <ul className="space-y-1 text-sm">
@@ -39,7 +37,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         </ul>
       </div>
 
-      {/* Gênero */}
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Gênero</h4>
         <ul className="space-y-1 text-sm">
@@ -55,7 +52,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         </ul>
       </div>
 
-      {/* Estado */}
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Estado</h4>
         <div className="flex flex-col gap-2 text-sm">
@@ -81,7 +77,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {/* Overlay SÓ NO RESTANTE DA TELA */}
       {isOpen && (
         <div
           onClick={onClose}
@@ -90,13 +85,11 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         ></div>
       )}
 
-      {/* Mobile Sidebar */}
       <div
         className={`fixed top-23 left-0 h-full w-[300px] bg-white p-4 z-50 transform transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Botão Fechar */}
         <button
           onClick={onClose}
           className="cursor-pointer absolute top-4 right-4 text-gray-700 text-xl"
@@ -106,7 +99,6 @@ const SidebarFilters = ({ isOpen, onClose }) => {
         {filterContent}
       </div>
 
-      {/* Desktop Sidebar */}
       <aside className="w-[308px] h-fit bg-white p-4 rounded hidden md:block shrink-0">
         {filterContent}
       </aside>

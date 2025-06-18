@@ -1,15 +1,12 @@
-// src/pages/MyInformation.jsx
 
-import React, { useState } from 'react'; // 1. Importe o useState
+import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import LayoutWrapper from '../components/LayoutWrapper';
 import SidebarMenu from '../components/SidebarMenu';
 
 const MyInformation = () => {
-  // 2. Estado para controlar o modo de edição
   const [isEditing, setIsEditing] = useState(false);
 
-  // 3. Mova os dados do usuário para o estado para que possam ser editados
   const [userInfo, setUserInfo] = useState({
     nome: "Francisco Antonio Pereira",
     cpf: "123485913-35",
@@ -24,7 +21,6 @@ const MyInformation = () => {
     cep: "433-8800",
   });
 
-  // 4. Função para lidar com mudanças nos inputs
   const handleUserChange = (e) => {
     const { name, value } = e.target;
     setUserInfo(prevInfo => ({ ...prevInfo, [name]: value }));
@@ -35,15 +31,12 @@ const MyInformation = () => {
     setDeliveryInfo(prevInfo => ({ ...prevInfo, [name]: value }));
   };
 
-  // 5. Função para salvar os dados (por enquanto, apenas sai do modo de edição)
   const handleSave = () => {
     console.log("Dados salvos:", { userInfo, deliveryInfo });
-    // Aqui você faria uma chamada de API para salvar os dados no backend
     setIsEditing(false);
   };
   
   const handleCancel = () => {
-    // Aqui você poderia resetar os dados para os originais se quisesse
     setIsEditing(false);
   };
 
@@ -61,7 +54,6 @@ const MyInformation = () => {
             <div className="flex justify-between items-center pb-4 border-b border-gray-200">
               <h2 className="font-bold text-lg text-gray-800">Minhas Informações</h2>
               
-              {/* 6. O botão "Editar" agora alterna o estado 'isEditing' */}
               {!isEditing && (
                 <button 
                   onClick={() => setIsEditing(true)}
@@ -72,7 +64,6 @@ const MyInformation = () => {
               )}
             </div>
 
-            {/* 7. O conteúdo muda com base no estado 'isEditing' */}
             <div className="pt-6 pb-4 border-b border-gray-200 text-left">
               <h3 className="font-semibold text-gray-700 mb-4">Informações Pessoais</h3>
               <div className="space-y-3 text-sm">
