@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // 1. Importe o Link
 
 export default function ResumoPedido({ subtotal, frete, desconto }) {
   const total = subtotal + frete - desconto;
@@ -25,9 +26,14 @@ export default function ResumoPedido({ subtotal, frete, desconto }) {
       <p className="mt-2 text-xs text-gray-500 text-right">
         ou 10x de R$ {(total / 10).toFixed(2)} sem juros
       </p>
-      <button className="bg-[#F6AA1C] text-white px-4 py-2 mt-8 rounded-md hover:bg-gray-800 focus:outline-none w-full text-sm cursor-pointer">
+
+      {/* 2. O botão foi substituído por um Link estilizado */}
+      <Link
+        to="/confirmation"
+        className="block bg-[#F6AA1C] text-white text-center px-4 py-2 mt-8 rounded-md hover:bg-gray-800 focus:outline-none w-full text-sm cursor-pointer"
+      >
         Continuar
-      </button>
+      </Link>
     </div>
   );
 }
