@@ -60,8 +60,8 @@ export default function FormAccount() {
   }
 
   return (
-    <div className="bg-linear-to-bl from-[#b5b6f2] to-[#efefff]">
-      <header className=" bg-white  flex justify-center items-cente p-5 xl:p-10 mb-10 xl:flex xl:justify-start ">
+    <div className="min-h-screen w-full bg-linear-to-bl from-[#b5b6f2] to-[#efefff]">
+      <header className="bg-white flex justify-center items-center p-5 xl:p-10 mb-10">
         <div className="flex items-center justify-center flex-1 space-x-4">
           <img
             src={LogoHeader}
@@ -70,167 +70,148 @@ export default function FormAccount() {
           />
         </div>
       </header>
-      <div className="flex justify-center items-cente m-5 xl:ml-[-825px]">
+      <div className="flex justify-center items-center m-5 xl:ml-[-825px]">
         <h2 className=" font-bold text-3xl  ">Criar Conta</h2>
       </div>
       <form
-        className="flex justify-center items-cente"
+        className="flex justify-center items-center"
         onSubmit={handleSubmit}
       >
-        <div className="space-y-2">
-          <div className="bg-white w-[350px] h-[700px] space-y-6 md:w-[700px] xl:w-[1000px]">
-            <div className="pt-5">
-              <p className="ml-6">Informações Pessoais</p>
-            </div>
-            <div className="border-t border-gray-300 mb-4"></div>
-
-            <p className="ml-6">Nome Completo </p>
-            <div className="flex flex-col items-center ">
-              <input
-                type="text"
-                name="nome"
-                value={form.nome}
-                onChange={handleChange}
-                placeholder="Insira seu nome"
-                className=" border-2 border-gray-50 focus:border-[#C92071]
-                     outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">CPF </p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="cpf"
-                value={form.cpf}
-                onChange={handleChange}
-                placeholder="Insira seu CPF"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">E-mail </p>
-            <div className="flex flex-col items-center">
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Insira seu email"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-            <p className="ml-6">Senha</p>
-            <div className="flex flex-col items-center">
-              <input
-                type="password"
-                name="senha"
-                value={form.senha}
-                onChange={handleChange}
-                placeholder="Insira sua senha"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                 outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px] xl:w-[950px]"
-                required
-              />
-            </div>
-
-            <p className="ml-6">Celular</p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="celular"
-                value={form.celular}
-                onChange={handleChange}
-                placeholder="Insira seu celular"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
+        <div className="w-full max-w-3xl bg-white/90 rounded-lg shadow-lg p-6 md:p-12 flex flex-col gap-8">
+          {/* Informações Pessoais */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Informações Pessoais</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block mb-1">Nome Completo</label>
+                <input
+                  type="text"
+                  name="nome"
+                  value={form.nome}
+                  onChange={handleChange}
+                  placeholder="Insira seu nome"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">CPF</label>
+                <input
+                  type="text"
+                  name="cpf"
+                  value={form.cpf}
+                  onChange={handleChange}
+                  placeholder="Insira seu CPF"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Insira seu email"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">Senha</label>
+                <input
+                  type="password"
+                  name="senha"
+                  value={form.senha}
+                  onChange={handleChange}
+                  placeholder="Insira sua senha"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block mb-1">Celular</label>
+                <input
+                  type="text"
+                  name="celular"
+                  value={form.celular}
+                  onChange={handleChange}
+                  placeholder="Insira seu celular"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
             </div>
           </div>
-
-          <div className="bg-white w-[350px] h-[680px] space-y-6 md:w-[700px] xl:w-[1000px]">
-            <div className="pt-5">
-              <p className="ml-6">Informações de Entrega</p>
-            </div>
-            <div className="border-t border-gray-300 mb-4"></div>
-
-            <p className="ml-6">Endereço </p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="endereco"
-                value={form.endereco}
-                onChange={handleChange}
-                placeholder="Insira seu endereço"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">Bairro</p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="bairro"
-                value={form.bairro}
-                onChange={handleChange}
-                placeholder="Insira seu bairro"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">Cidade </p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="cidade"
-                value={form.cidade}
-                onChange={handleChange}
-                placeholder="Insira sua cidade"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">CEP</p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="cep"
-                value={form.cep}
-                onChange={handleChange}
-                placeholder="Insira seu cep"
-                className="border-2 border-gray-50 focus:border-[#C92071] 
-                    outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
-            </div>
-
-            <p className="ml-6">Complemento</p>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                name="complemento"
-                value={form.complemento}
-                onChange={handleChange}
-                placeholder="Insira complemento"
-                className="border-2 border-gray-50 focus:border-[#C92071]
-                     outline-none w-[300px] bg-gray-50 p-2 rounded-[4px] md:w-[650px]  xl:w-[950px]"
-              />
+          {/* Informações de Entrega */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">
+              Informações de Entrega
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block mb-1">Endereço</label>
+                <input
+                  type="text"
+                  name="endereco"
+                  value={form.endereco}
+                  onChange={handleChange}
+                  placeholder="Insira seu endereço"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">Bairro</label>
+                <input
+                  type="text"
+                  name="bairro"
+                  value={form.bairro}
+                  onChange={handleChange}
+                  placeholder="Insira seu bairro"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">Cidade</label>
+                <input
+                  type="text"
+                  name="cidade"
+                  value={form.cidade}
+                  onChange={handleChange}
+                  placeholder="Insira sua cidade"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div>
+                <label className="block mb-1">CEP</label>
+                <input
+                  type="text"
+                  name="cep"
+                  value={form.cep}
+                  onChange={handleChange}
+                  placeholder="Insira seu cep"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block mb-1">Complemento</label>
+                <input
+                  type="text"
+                  name="complemento"
+                  value={form.complemento}
+                  onChange={handleChange}
+                  placeholder="Insira complemento"
+                  className="w-full border-2 border-gray-50 focus:border-[#C92071] outline-none bg-gray-50 p-2 rounded"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col justify-center items-center gap-[60px] ">
-          <div className="w-[350px] h-[48px] gap-[30px] md:w-[700px]  xl:w-[1000px]">
-            <label>
+          {/* Checkbox e botão */}
+          <div className="flex flex-col gap-6">
+            <label className="flex items-start gap-2">
               <input
                 type="checkbox"
                 name="ofertas"
                 checked={form.ofertas}
                 onChange={handleChange}
-                className="cursor-pointer"
+                className="cursor-pointer mt-1"
               />
               <span>
                 Quero receber por email ofertas e novidades das lojas da Digital
@@ -238,12 +219,9 @@ export default function FormAccount() {
                 interação do cliente.
               </span>
             </label>
-          </div>
-          <div className="mb-[30px]">
             <button
               type="submit"
-              className="text-white bg-[#C92071] bordeR-[#C92071]
-            cursor-pointer w-[350px]  h-[48px] rounded-lg md:w-[700px]  xl:w-[950px]"
+              className="text-white bg-[#C92071] hover:bg-pink-700 cursor-pointer w-full h-[48px] rounded-lg font-semibold text-lg"
             >
               Criar Conta
             </button>
