@@ -5,7 +5,9 @@ import RelatedProducts from "../components/RelatedProducts";
 import SidebarFilters from "../components/SidebarFilters";
 
 export default function ProductList() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado para abrir/fechar o filtro lateral no mobile
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   return (
     <LayoutWrapper>
@@ -50,15 +52,19 @@ export default function ProductList() {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Sidebar recebendo props para abrir/fechar no mobile */}
           <SidebarFilters
             isOpen={isSidebarOpen}
             onClose={() => setIsSidebarOpen(false)}
+            selectedBrands={selectedBrands}
+            setSelectedBrands={setSelectedBrands}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
           />
-
-          {/* Lista de produtos */}
           <div className="w-full md:w-3/4">
-            <ListProducts />
+            <ListProducts
+              selectedBrands={selectedBrands}
+              selectedCategories={selectedCategories}
+            />
           </div>
         </div>
       </div>

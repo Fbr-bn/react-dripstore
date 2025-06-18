@@ -7,7 +7,7 @@ const RelatedProducts = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/produtos")
+      .get("http://localhost:3000/api/produtos")
       .then((response) => {
         setRelatedProducts(response.data.slice(0, 4));
       })

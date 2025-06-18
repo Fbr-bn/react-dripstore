@@ -29,7 +29,7 @@ export default function PageCart() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5173/page-cart")
+      .get("http://localhost:3000/api/produtos")
       .then((response) => {
         const data = Array.isArray(response.data)
           ? response.data.slice(0, 4)

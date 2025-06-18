@@ -1,6 +1,32 @@
 import React from "react";
 
-const SidebarFilters = ({ isOpen, onClose }) => {
+const brands = ["Adidas", "Balenciaga", "K-Swiss", "Nike", "Puma"];
+const categories = ["esporte", "casual", "corrida", "infantil", "chinela"];
+
+const SidebarFilters = ({
+  isOpen,
+  onClose,
+  selectedBrands,
+  setSelectedBrands,
+  selectedCategories,
+  setSelectedCategories,
+}) => {
+  const handleBrandChange = (brand) => {
+    setSelectedBrands((prev) =>
+      prev.includes(brand)
+        ? prev.filter((b) => b !== brand)
+        : [...prev, brand]
+    );
+  };
+
+  const handleCategoryChange = (cat) => {
+    setSelectedCategories((prev) =>
+      prev.includes(cat)
+        ? prev.filter((c) => c !== cat)
+        : [...prev, cat]
+    );
+  };
+
   const filterContent = (
     <>
       <h3 className="text-xl font-bold text-gray-700 pb-5 mb-4 border-b border-gray-300">
@@ -11,11 +37,13 @@ const SidebarFilters = ({ isOpen, onClose }) => {
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Marca</h4>
         <ul className="space-y-1 text-sm">
-          {["Adidas", "Balenciaga", "K-Swiss", "Nike", "Puma"].map((brand) => (
+          {brands.map((brand) => (
             <li key={brand}>
               <input
                 type="checkbox"
                 className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
+                checked={selectedBrands.includes(brand)}
+                onChange={() => handleBrandChange(brand)}
               />
               {brand}
             </li>
@@ -27,11 +55,13 @@ const SidebarFilters = ({ isOpen, onClose }) => {
       <div className="mb-4">
         <h4 className="text-sm font-bold mb-2">Categoria</h4>
         <ul className="space-y-1 text-sm">
-          {["Esporte e lazer", "Casual", "Utilitário", "Corrida"].map((cat) => (
+          {categories.map((cat) => (
             <li key={cat}>
               <input
                 type="checkbox"
                 className="scale-125 mr-1 cursor-pointer accent-[#C92071]"
+                checked={selectedCategories.includes(cat)}
+                onChange={() => handleCategoryChange(cat)}
               />
               {cat}
             </li>
